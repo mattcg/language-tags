@@ -14,24 +14,24 @@ var tags = require('language-tags')
 
 Note that all lookups and checks for tags and subtags are case insensitive. For formatting according to common conventions, see `tag.format`.
 
-### tags(subtag), tags(subtags) ###
+### tags(tag), tags.check(tag) ###
+
+Check whether a hyphen-separated tag is valid and well-formed. Always returns a `Tag`, which can be checked using the `valid` method.
+
+### tags.subtag(subtag), tags.subtag(subtags) ###
 
 Look up one or more subtags. Returns an array of `Subtag` objects or an empty array.
 
-Calling `tags('mt')` will return an array with two `Subtag` objects: one for Malta (the 'region' type subtag) and one for Maltese (the 'language' type subtag).
+Calling `tags.subtag('mt')` will return an array with two `Subtag` objects: one for Malta (the 'region' type subtag) and one for Maltese (the 'language' type subtag).
 
 ```
-> tags('mt');
+> tags.subtag('mt');
 [Subtag, Subtag]
-> tags('bumblebee');
+> tags.subtag('bumblebee');
 []
 ```
 
 To get or check a single subtag by type use `tags.language(subtag)`, `tags.region(subtag)` or `tags.type(subtag, type)`.
-
-### tags.check(tag) ###
-
-Check whether a hyphen-separated tag is valid and well-formed. Always returns a `Tag`, which can be checked using the `valid` method.
 
 ### tags.search(description, [all]) ###
 
@@ -107,7 +107,7 @@ Get the subtag type (either 'language', 'extlang', 'script', 'region' or 'varian
 Returns the subtag's code.
 
 ```
-> tags('ja').code();
+> tags.subtag('ja').code();
 'ja'
 ```
 
@@ -116,7 +116,7 @@ Returns the subtag's code.
 Returns an array of description strings (a subtag may have more than one description).
 
 ```
-> tags('ro').descriptions();
+> tags.subtag('ro').descriptions();
 ['Romanian', 'Moldavian', 'Moldovan']
 ```
 
@@ -125,7 +125,7 @@ Returns an array of description strings (a subtag may have more than one descrip
 Returns a preferred subtag as a `Subtag` object if the subtag is deprecated. For example, `ro` is preferred over deprecated `mo`.
 
 ```
-> tags('mo').preferred();
+> tags.subtag('mo').preferred();
 Subtag
 ```
 
@@ -140,9 +140,9 @@ Returns the subtag scope as a string, or an empty string if the subtag has no sc
 Tip: if the subtag represents a macrolanguage, you can use `tags.languages(macrolanguage)` to get a list of all the macrolanguage's individual languages.
 
 ```
-> tags('zh').scope();
+> tags.subtag('zh').scope();
 'macrolanguage'
-> tags('nah').scope();
+> tags.subtag('nah').scope();
 'collection'
 ```
 
@@ -151,7 +151,7 @@ Tip: if the subtag represents a macrolanguage, you can use `tags.languages(macro
 Returns a date string reflecting the deprecation date if the subtag is deprecated.
 
 ```
-> tags('ja').deprecated();
+> tags.subtag('ja').deprecated();
 '2008-11-22'
 ```
 
@@ -160,7 +160,7 @@ Returns a date string reflecting the deprecation date if the subtag is deprecate
 Returns a date string reflecting the date the subtag was added to the registry.
 
 ```
-> tags('ja').added();
+> tags.subtag('ja').added();
 '2005-10-16'
 ```
 
@@ -169,15 +169,36 @@ Returns a date string reflecting the date the subtag was added to the registry.
 Returns an array comments, if any, otherwise returns an empty array.
 
 ```
-> tags('nmf').comments();
+> tags.subtag('nmf').comments();
 ['see ntx']
 ```
+
+#### subtag.format() ####
+
+Format the subtags according to the case conventions defined in [RFC 5646 section 2.1.1](http://tools.ietf.org/html/rfc5646#section-2.1.1).
+
+- language codes are made lowercase ('mn' for Mongolian)
+- script codes are made lowercase with the initial letter capitalized ('Cyrl' for Cyrillic)
+- country codes are capitalized ('MN' for Mongolia)
 
 ### Tag ###
 
 #### tag.preferred() ####
 
 If the tag is listed as 'deprecated' or 'redundant' it might have a preferred value. This method returns a `Tag` object if so.
+
+```
+> tags('zh-cmn-Hant').preferred();
+Tag
+```
+
+#### tag.grandfathered() ####
+
+Returns `true` if the tag is grandfathered, false otherwise. For a definition of grandfathered tags, see [RFC 5646 section 2.2.8](http://tools.ietf.org/html/rfc5646#section-2.2.8).
+
+#### tag.redundant() ####
+
+Returns `true` if the tag is redundant, false otherwise. For a definition of grandfathered tags, see [RFC 5646 section 2.2.8](http://tools.ietf.org/html/rfc5646#section-2.2.8).
 
 #### tag.subtags() ####
 
@@ -189,7 +210,7 @@ Returns `true` if the tag is valid, `false` otherwise.
 
 #### tag.errors() ####
 
-Returns an array of `Error` objects if the tag is invalid. The `message` property of each is readable and helpful enough for UI output. The `code` property can be check against the `tags.ERR_*` constants.
+Returns an array of `Error` objects if the tag is invalid. The `message` property of each is readable and helpful enough for UI output. The `code` property can be check against the `Tag.ERR_*` constants.
 
 #### tag.format() ####
 
@@ -199,6 +220,19 @@ Format a tag according to the case conventions defined in [RFC 5646 section 2.1.
 > tags.check('en-gb').format();
 'en-GB'
 ```
+
+#### tag.deprecated() ####
+
+For grandfathered or redundant tags, returns a date string reflecting the deprecation date if the tag is deprecated.
+
+```
+> tags('zh-cmn-Hant').deprecated();
+'2009-07-29'
+```
+
+#### tag.added() ####
+
+For grandfathered or redundant tags, returns a date string reflecting the date the tag was added to the registry.
 
 ## Raw data ##
 

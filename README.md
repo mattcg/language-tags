@@ -4,6 +4,8 @@ Takes the headache out of working with language tags in JavaScript. Provides an 
 
 Based on [BCP 47](http://tools.ietf.org/html/bcp47) ([RFC 5646](http://tools.ietf.org/html/rfc5646)) and the latest [IANA language subtag registry](http://www.iana.org/assignments/language-subtag-registry).
 
+This project will be updated as the standards change. Changes in the registry will result in the revision number being bumped.
+
 ## Usage ##
 
 ```js

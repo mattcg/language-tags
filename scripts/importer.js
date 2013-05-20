@@ -9,7 +9,7 @@
 'use strict';
 
 var IANA_RAW_CACHE = __dirname + '/cache/language-subtag-registry';
-var OUT_DIR = __dirname + '/../lib';
+var OUT_DIR = __dirname + '/../lib/data';
 
 var assert = require('assert');
 var http = require('http');

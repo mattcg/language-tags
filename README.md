@@ -238,3 +238,9 @@ If there are changes, please make a pull request.
 ## Resources ##
 
 - [RFC 5646 file format description](http://tools.ietf.org/html/rfc5646#section-3.1.1)
+
+## Credits and collaboration ##
+
+Copyright (c) [Matthew Caruana Galizia](http://twitter.com/mcaruanagalizia) 2013.
+
+This project is licensed under an [MIT licence](http://mattcg.mit-license.org/). Comments, feedback and suggestions are welcome. Please feel free to raise an issue or pull request. Enjoy.

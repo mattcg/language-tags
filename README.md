@@ -241,6 +241,6 @@ If there are changes, please make a pull request.
 
 ## Credits and collaboration ##
 
-Copyright (c) [Matthew Caruana Galizia](http://twitter.com/mcaruanagalizia) 2013.
+Copyright (c) 2013, [Matthew Caruana Galizia](http://twitter.com/mcaruanagalizia).
 
 This project is licensed under an [MIT licence](http://mattcg.mit-license.org/). Comments, feedback and suggestions are welcome. Please feel free to raise an issue or pull request. Enjoy.

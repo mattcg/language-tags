@@ -24,7 +24,7 @@ Shortcut for `tags(tag).valid()`. Return `true` if the tag is valid, `false` oth
 
 ### tags.subtag(subtag), tags.subtag(subtags) ###
 
-Look up one or more subtags. Returns an array of `Subtag` objects. Throws an error if the input subtag is non-existent; the `code` property can be checked against the `Subtag.ERR_*` constants.
+Look up one or more subtags. Returns an array of `Subtag` objects. Returns an empty array if all of the subtags are non-existent.
 
 Calling `tags.subtag('mt')` will return an array with two `Subtag` objects: one for Malta (the 'region' type subtag) and one for Maltese (the 'language' type subtag).
 
@@ -32,7 +32,7 @@ Calling `tags.subtag('mt')` will return an array with two `Subtag` objects: one 
 > tags.subtag('mt');
 [Subtag, Subtag]
 > tags.subtag('bumblebee');
-Error: Non-existent subtag 'bumblebee'.
+[]
 ```
 
 To get or check a single subtag by type use `tags.language(subtag)`, `tags.region(subtag)` or `tags.type(subtag, type)`.
@@ -167,7 +167,7 @@ Returns a date string reflecting the date the subtag was added to the registry.
 
 #### subtag.comments() ####
 
-Returns an array comments, if any, otherwise returns an empty array.
+Returns an array of comments, if any, otherwise returns an empty array.
 
 ```
 > tags.language('nmf').comments();

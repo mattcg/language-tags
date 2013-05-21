@@ -22,9 +22,11 @@ config.LanguageTagsTests = {
     },
 */
     sources: [
-        'lib/Tag.js'
+        'lib/Tag.js',
+		'lib/Subtag.js'
     ],
     tests: [
-        'tests/lib/TagTest.js'
+        'tests/lib/TagTest.js',
+		'tests/lib/SubtagTest.js'
     ]
 };

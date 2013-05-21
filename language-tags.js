@@ -26,9 +26,7 @@ tags.types = function(subtag) {
 	var err, types = index[subtag];
 
 	if (!types) {
-		err = new Error('Non-existent subtag \'' + subtag + '\'.');
-		err.code = Subtag.ERR_NONEXISTENT;
-		throw err;
+		return [];
 	}
 
 	return types;

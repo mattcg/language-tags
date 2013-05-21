@@ -5,6 +5,7 @@
  */
 
 /*jshint node:true*/
+/*global assert, refute*/
 
 'use strict';
 
@@ -193,5 +194,15 @@ buster.testCase('Tag', {
 		assert.equals(new Tag('en-gb-oed').format(), 'en-GB-oed');
 		assert.equals(new Tag('az-latn').format(), 'az-Latn');
 		assert.equals(new Tag('ZH-hant-hK').format(), 'zh-Hant-HK');
+	},
+	'tag.preferred() returns preferred tag if available': function() {
+		var tag = new Tag('zh-cmn-Hant');
+
+		assert.equals(tag.type(), 'redundant');
+		assert(tag.deprecated());
+		assert(tag.preferred());
+		assert.equals(tag.preferred().format(), 'cmn-Hant');
+
+		assert.isNull(new Tag('zh-Hans').preferred());
 	}
 });

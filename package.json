@@ -22,7 +22,7 @@
 		}
 	],
 	"scripts": {
-		"test": "node_modules/.bin/buster-test -c tests/buster.js"
+		"test": "node_modules/buster/bin/buster-test -c tests/buster.js"
 	},
 	"keywords": [
 		"iana",

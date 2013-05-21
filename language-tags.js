@@ -38,7 +38,7 @@ tags.subtag = function(subtags) {
 
 	subtags.forEach(function(subtag) {
 		tags.types(subtag).forEach(function(type) {
-			result.push(new Subtag(subtag, type);
+			result.push(new Subtag(subtag, type));
 		});
 	});
 

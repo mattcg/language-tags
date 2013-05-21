@@ -5,7 +5,7 @@ test: node_modules
 	npm test
 
 update:
-	./bin/update
+	./bin/import
 
 clean:
 	rm -rf build/logs/*.lcov

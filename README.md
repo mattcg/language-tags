@@ -20,7 +20,7 @@ Check whether a hyphen-separated tag is valid and well-formed. Always returns a 
 
 ### tags.subtag(subtag), tags.subtag(subtags) ###
 
-Look up one or more subtags. Returns an array of `Subtag` objects. Throws an error if the input subtag is non-existent.
+Look up one or more subtags. Returns an array of `Subtag` objects. Throws an error if the input subtag is non-existent; the `code` property can be checked against the `Subtag.ERR_*` constants.
 
 Calling `tags.subtag('mt')` will return an array with two `Subtag` objects: one for Malta (the 'region' type subtag) and one for Maltese (the 'language' type subtag).
 
@@ -197,7 +197,7 @@ Returns `true` if the tag is valid, `false` otherwise.
 
 #### tag.errors() ####
 
-Returns an array of `Error` objects if the tag is invalid. The `message` property of each is readable and helpful enough for UI output. The `code` property can be check against the `Tag.ERR_*` constants.
+Returns an array of `Error` objects if the tag is invalid. The `message` property of each is readable and helpful enough for UI output. The `code` property can be checked against the `Tag.ERR_*` constants.
 
 #### tag.format() ####
 

@@ -179,10 +179,10 @@ buster.testCase('Tag', {
 		tag = new Tag('en-GB-oed');
 		assert.equals(tag.type(), 'grandfathered');
 		refute(tag.deprecated());
-		assert.equals(tag.description(), ['English, Oxford English Dictionary spelling']);
+		assert.equals(tag.descriptions(), ['English, Oxford English Dictionary spelling']);
 
 		// Otherwise returns an empty array.
-		assert.equals(new Tag('en').description(), []);
+		assert.equals(new Tag('en').descriptions(), []);
 	},
 	'tag.format() formats tag according to conventions': function() {
 		assert.equals(new Tag('en').format(), 'en');

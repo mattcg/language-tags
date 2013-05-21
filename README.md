@@ -14,9 +14,13 @@ var tags = require('language-tags')
 
 Note that all lookups and checks for tags and subtags are case insensitive. For formatting according to common conventions, see `tag.format`.
 
-### tags(tag), tags.check(tag) ###
+### tags(tag) ###
 
 Check whether a hyphen-separated tag is valid and well-formed. Always returns a `Tag`, which can be checked using the `valid` method.
+
+### tags.check(tag) ###
+
+Shortcut for `tags(tag).valid()`. Return `true` if the tag is valid, `false` otherwise. For meaningful error output see `tag.errors()`.
 
 ### tags.subtag(subtag), tags.subtag(subtags) ###
 
@@ -35,17 +39,23 @@ To get or check a single subtag by type use `tags.language(subtag)`, `tags.regio
 
 ### tags.search(description, [all]) ###
 
-Search for tags and subtags by description. Returns an array of `Subtag` and `Tag` objects or an empty array if no results were found.
+Search for tags and subtags by description. Supports either a RegExp object or a string for `description`. Returns an array of `Subtag` and `Tag` objects or an empty array if no results were found.
 
 Note that `Tag` objects in the results represent 'grandfathered' or 'redundant' tags. These are excluded by default. Set the `all` parameter to `true` to include them.
 
+Search is case-insensitive if `description` is a string.
+
 ### tags.languages(macrolanguage) ###
 
-Returns an array of `Subtag` objects representing all the 'language' type subtags belonging to the given 'macrolanguage' type subtag. Otherwise returns an empty array.
+Returns an array of `Subtag` objects representing all the 'language' type subtags belonging to the given 'macrolanguage' type subtag.
+
+Throws an error if `macrolanguage` is not a macrolanguage.
 
 ```
 > tags.languages('zh');
 [Subtag, Subtag...]
+> tags.languages('en');
+Error: 'en' is not a valid macrolanguage.
 ```
 
 ### tags.language(subtag) ###
@@ -74,7 +84,7 @@ null
 
 Get a subtag by type. Returns the subtag matching `type` as a `Subtag` object otherwise returns `null`.
 
-A `type` consists of one of the following strings: 'language', 'extlang', 'script', 'region' or 'variant'. To get a 'grandfathered' or 'redundant' type tag use `tags.check(tag)`.
+A `type` consists of one of the following strings: 'language', 'extlang', 'script', 'region' or 'variant'. To get a 'grandfathered' or 'redundant' type tag use `tags(tag)`.
 
 ```
 > tags.type('zh', 'macrolanguage');
@@ -204,7 +214,7 @@ Returns an array of `Error` objects if the tag is invalid. The `message` propert
 Format a tag according to the case conventions defined in [RFC 5646 section 2.1.1](http://tools.ietf.org/html/rfc5646#section-2.1.1).
 
 ```
-> tags.check('en-gb').format();
+> tags('en-gb').format();
 'en-GB'
 ```
 

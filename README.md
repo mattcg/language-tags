@@ -93,10 +93,6 @@ Subtag
 null
 ```
 
-### tags.subtag(subtag) ###
-
-Returns `true` if the `subtag` parameter is a valid subtag, as opposed to a grandfathered or redundant tag.
-
 ### tags.date() ###
 
 Returns the file date for the underlying data, as a string.

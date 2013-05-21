@@ -14,16 +14,18 @@ var Subtag = require('./lib/Subtag');
 var index = require('./lib/data/index');
 var registry = require('./lib/data/registry');
 
-var tags = module.exports = function(tag) {
+var tags = function(tag) {
 	return new Tag(tag);
 };
+
+module.exports = tags;
 
 tags.check = function(tag) {
 	return new Tag(tag).valid();
 };
 
 tags.types = function(subtag) {
-	var err, types = index[subtag];
+	var types = index[subtag];
 
 	if (!types) {
 		return [];
@@ -40,7 +42,7 @@ tags.subtag = function(subtags) {
 	}
 
 	subtags.forEach(function(subtag) {
-		tags.types(subtag).forEach(function(type) {
+		Object.keys(tags.types(subtag)).forEach(function(type) {
 			result.push(new Subtag(subtag, type));
 		});
 	});
@@ -63,7 +65,7 @@ tags.search = function(description, all) {
 		description = description.toLowerCase();
 
 		test = function(record) {
-			if (-1 === record.Description.join(', ').toLowerCase().indexOf(description)) {
+			if (-1 !== record.Description.join(', ').toLowerCase().indexOf(description)) {
 				push(record);
 			}
 		};

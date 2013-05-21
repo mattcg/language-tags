@@ -1,0 +1,38 @@
+{
+	"name": "language-tags",
+	"version": "0.2.1",
+	"implements": ["CommonJS/Modules/1.0"],
+	"description": "Work with language tags.",
+	"main": "language-tags.js",
+	"homepage": "https://github.com/mattcg/language-tags",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/mattcg/language-tags.git"
+	},
+	"contributors": [
+		{
+			"name": "Matthew Caruana Galizia",
+			"email": "m@m.cg"
+		}
+	],
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://mattcg.mit-license.org/"
+		}
+	],
+	"scripts": {
+		"test": "node_modules/.bin/buster-test -c tests/buster.js"
+	},
+	"keywords": [
+		"iana",
+		"bcp47",
+		"subtags",
+		"rfc5646",
+		"language"
+	],
+	"devDependencies": {
+		"buster": "0.x",
+		"buster-coverage": "*"
+	}
+}

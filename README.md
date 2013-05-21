@@ -192,13 +192,9 @@ If the tag is listed as 'deprecated' or 'redundant' it might have a preferred va
 Tag
 ```
 
-#### tag.grandfathered() ####
+#### tag.type() ####
 
-Returns `true` if the tag is grandfathered, false otherwise. For a definition of grandfathered tags, see [RFC 5646 section 2.2.8](http://tools.ietf.org/html/rfc5646#section-2.2.8).
-
-#### tag.redundant() ####
-
-Returns `true` if the tag is redundant, false otherwise. For a definition of grandfathered tags, see [RFC 5646 section 2.2.8](http://tools.ietf.org/html/rfc5646#section-2.2.8).
+Returns `grandfathered` if the tag is grandfathered, `redundant` if the tag is redundant, and `tag` if neither. For a definition of grandfathered and redundant tags, see [RFC 5646 section 2.2.8](http://tools.ietf.org/html/rfc5646#section-2.2.8).
 
 #### tag.subtags() ####
 
@@ -233,6 +229,10 @@ For grandfathered or redundant tags, returns a date string reflecting the deprec
 #### tag.added() ####
 
 For grandfathered or redundant tags, returns a date string reflecting the date the tag was added to the registry.
+
+#### tag.description() ####
+
+Returns an array of tag descriptions for grandfathered or redundant tags, otherwise returns an empty array.
 
 ## Raw data ##
 

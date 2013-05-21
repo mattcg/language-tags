@@ -231,7 +231,7 @@ See `lib/data/` for all the JSON files available. The `registry.json` file conta
 
 ## Updating ##
 
-Run `bin/import` to update data from the latest official IANA-hosted version. The registry file format is converted to JSON automatically and the files in `lib/` are updated.
+Run `make update` to update data from the latest official IANA-hosted version. The registry file format is converted to JSON automatically and the files in `lib/` are updated.
 
 If there are changes, please make a pull request.
 

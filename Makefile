@@ -13,6 +13,6 @@ update:
 	./bin/import
 
 clean:
-	rm -rf build/logs/*.lcov
+	rm -rf build/logs/jscoverage/*.lcov build/logs/jscoverage/html node_modules scripts/cache/language-subtag-registry
 
 .PHONY: test update clean

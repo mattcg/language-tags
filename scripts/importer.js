@@ -84,7 +84,7 @@ function convert() {
 }
 
 function write(name, object) {
-	fs.writeFileSync(OUT_DIR + '/' + name + '.json', JSON.stringify(object) + '\n');
+	fs.writeFileSync(OUT_DIR + '/' + name + '.json', JSON.stringify(object, null, '\t') + '\n');
 }
 
 function parseRecord(record) {

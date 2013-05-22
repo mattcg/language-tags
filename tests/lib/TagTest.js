@@ -276,11 +276,20 @@ buster.testCase('Tag', {
 		assert.equals(err.code, Tag.ERR_SUPPRESS_SCRIPT);
 		assert.equals(err.message, 'The script subtag \'Latn\' is the same as the language suppress-script.');
 
-		errs = new Tag('en-GB-Latn').errors();
+		errs = new Tag('en-Latn-GB').errors();
 		assert.equals(errs.length, 1);
 		err = errs[0];
 		assert.equals(err.code, Tag.ERR_SUPPRESS_SCRIPT);
 		assert.equals(err.message, 'The script subtag \'Latn\' is the same as the language suppress-script.');
+	},
+	'tag.errors() returns error if subtags are in wrong order': function() {
+		var errs, err;
+
+		errs = new Tag('mt-MT-Arab').errors();
+		assert.equals(errs.length, 1);
+		err = errs[0];
+		assert.equals(err.code, Tag.ERR_WRONG_ORDER);
+		assert.equals(err.message, 'The subtag \'MT\' should not appear before \'Arab\'.');
 	},
 	'tag.valid() returns true for valid tag': function() {
 		assert(new Tag('en').valid());

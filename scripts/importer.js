@@ -159,7 +159,7 @@ function run(callback) {
 			res.pipe(output);
 		}
 
-		output.on('end', function() {
+		output.on('finish', function() {
 			convert();
 			if (callback) {
 				callback();

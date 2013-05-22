@@ -1,6 +1,6 @@
 {
 	"name": "language-tags",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"implements": ["CommonJS/Modules/1.0"],
 	"description": "Work with language tags.",
 	"main": "language-tags.js",

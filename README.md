@@ -252,7 +252,9 @@ If there are changes, please make a pull request.
 
 ## Resources ##
 
-- [RFC 5646 file format description](http://tools.ietf.org/html/rfc5646#section-3.1.1)
+- [Language Subtag Lookup tool by Richard Ishida](http://rishida.net/utils/subtags/)
+- [W3C Internationalization Checker](http://validator.w3.org/i18n-checker/)
+- [RFC 5646](http://tools.ietf.org/html/rfc5646)
 
 ## Credits and collaboration ##
 

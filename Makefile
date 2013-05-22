@@ -1,8 +1,13 @@
 node_modules: package.json
 	npm install
 
-test: node_modules
+build/logs/jscoverage/coverage.lcov: node_modules
 	npm test
+
+build/logs/jscoverage/html: build/logs/jscoverage/coverage.lcov
+	genhtml --output-directory build/logs/jscoverage/html build/logs/jscoverage/coverage.lcov
+
+test: build/logs/jscoverage/html
 
 update:
 	./bin/import

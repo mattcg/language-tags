@@ -13,14 +13,14 @@ var config = module.exports;
 config.LanguageTagsTests = {
 	rootPath: '../',
     environment: 'node',
-/*
-    extensions: [ require('buster-coverage') ],
+    extensions: [
+		require('buster-coverage')
+	],
     'buster-coverage': {
         outputDirectory: 'build/logs/jscoverage',
         format: 'lcov',
         combinedResultsOnly: true
     },
-*/
     sources: [
         'lib/Tag.js',
 		'lib/Subtag.js',

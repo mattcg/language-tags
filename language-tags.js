@@ -31,10 +31,12 @@ tags.types = function(subtag) {
 		return [];
 	}
 
-	return types;
+	return Object.keys(types).filter(function(type) {
+		return type !== 'grandfathered' && type !== 'redundant';
+	});
 };
 
-tags.subtag = function(subtags) {
+tags.subtags = function(subtags) {
 	var result = [];
 
 	if (!Array.isArray(subtags)) {
@@ -42,12 +44,18 @@ tags.subtag = function(subtags) {
 	}
 
 	subtags.forEach(function(subtag) {
-		Object.keys(tags.types(subtag)).forEach(function(type) {
+		tags.types(subtag).forEach(function(type) {
 			result.push(new Subtag(subtag, type));
 		});
 	});
 
 	return result;
+};
+
+tags.filter = function(subtags) {
+	return subtags.filter(function(subtag) {
+		return !tags.types(subtag).length;
+	});
 };
 
 tags.search = function(description, all) {

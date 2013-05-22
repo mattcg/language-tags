@@ -22,20 +22,29 @@ Check whether a hyphen-separated tag is valid and well-formed. Always returns a 
 
 Shortcut for `tags(tag).valid()`. Return `true` if the tag is valid, `false` otherwise. For meaningful error output see `tag.errors()`.
 
-### tags.subtag(subtag), tags.subtag(subtags) ###
+### tags.subtags(subtag), tags.subtags(subtags) ###
 
 Look up one or more subtags. Returns an array of `Subtag` objects. Returns an empty array if all of the subtags are non-existent.
 
-Calling `tags.subtag('mt')` will return an array with two `Subtag` objects: one for Malta (the 'region' type subtag) and one for Maltese (the 'language' type subtag).
+Calling `tags.subtags('mt')` will return an array with two `Subtag` objects: one for Malta (the 'region' type subtag) and one for Maltese (the 'language' type subtag).
 
 ```
-> tags.subtag('mt');
+> tags.subtags('mt');
 [Subtag, Subtag]
-> tags.subtag('bumblebee');
+> tags.subtags('bumblebee');
 []
 ```
 
 To get or check a single subtag by type use `tags.language(subtag)`, `tags.region(subtag)` or `tags.type(subtag, type)`.
+
+### tags.filter(subtags) ###
+
+The opposite of `tags.subtags(subtags)`. Returns an array of codes that are not registered subtags, otherwise returns an empty array.
+
+```
+> tags.filter(['en', 'Aargh']);
+['Aargh']
+```
 
 ### tags.search(description, [all]) ###
 
@@ -203,7 +212,7 @@ Returns `true` if the tag is valid, `false` otherwise.
 
 #### tag.errors() ####
 
-Returns an array of `Error` objects if the tag is invalid. The `message` property of each is readable and helpful enough for UI output. The `code` property can be checked against the `Tag.ERR_*` constants.
+Returns an array of `Error` objects if the tag is invalid. The `message` property of each is readable and helpful enough for UI output. The `code` property can be checked against the `Tag.ERR_*` constants. Each error will also have either a `subtag` or `tag` property with the code of the offending tag.
 
 #### tag.format() ####
 

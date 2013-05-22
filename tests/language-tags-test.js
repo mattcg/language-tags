@@ -77,13 +77,13 @@ buster.testCase('language-tags', {
 		subtags = tags.search('Gibberish');
 		assert.equals(subtags, []);
 	},
-	'subtag() returns subtags': function() {
+	'subtags() returns subtags': function() {
 		var subtags;
 
-		subtags = tags.subtag('whatever');
+		subtags = tags.subtags('whatever');
 		assert.equals(subtags, []);
 
-		subtags = tags.subtag('mt');
+		subtags = tags.subtags('mt');
 		assert.equals(subtags.length, 2);
 		assert.equals(subtags[0].type(), 'language');
 		assert.equals(subtags[0].format(), 'mt');

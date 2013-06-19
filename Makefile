@@ -1,5 +1,6 @@
 node_modules: package.json
 	npm install
+	touch node_modules
 
 build/logs/jscoverage/coverage.lcov: node_modules
 	npm test

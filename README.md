@@ -260,6 +260,6 @@ If there are changes, please make a pull request.
 
 Copyright (c) 2013, [Matthew Caruana Galizia](http://twitter.com/mcaruanagalizia).
 
-The software part of this project is licensed under an [MIT licence](http://mattcg.mit-license.org/). The JSON database is separately licensed a [Open Data Commons Attribution License (ODC-BY)](http://opendatacommons.org/licenses/by/1.0/).
+The software part of this project is licensed under an [MIT licence](http://mattcg.mit-license.org/). The JSON database is separately licensed an [Open Data Commons Attribution License (ODC-BY)](http://opendatacommons.org/licenses/by/1.0/).
 
 Comments, feedback and suggestions are welcome. Please feel free to raise an issue or pull request. Enjoy.

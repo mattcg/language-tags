@@ -19,6 +19,10 @@
 		{
 			"type": "MIT",
 			"url": "http://mattcg.mit-license.org/"
+		},
+		{
+			"type": "ODC-BY",
+			"url": "http://opendatacommons.org/licenses/by/1.0/"
 		}
 	],
 	"scripts": {

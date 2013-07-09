@@ -1,3 +1,12 @@
 #!/usr/bin/env node
 
-require('../scripts/importer').run();
+/*jshint node:true*/
+
+'use strict';
+
+require('../scripts/importer').run(function(err) {
+	if (err) {
+		console.error(err);
+		process.exit(1);
+	}
+});

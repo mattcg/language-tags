@@ -122,12 +122,12 @@ function parseRecord(record) {
 	}, {});
 }
 
-function run(callback) {
+function run(cb) {
 	var options;
 
 	options = {
 		hostname: 'www.iana.org',
-		path: '/assignments/language-subtag-registry',
+		path: '/assignments/language-subtag-registry/language-subtag-registry',
 		headers: {
 			'Accept-Encoding': 'gzip,deflate',
 			'Accept-Charset': 'utf-8'
@@ -143,11 +143,11 @@ function run(callback) {
 
 		if (res.statusCode === 304) {
 			convert();
-			if (callback) {
-				callback();
-			}
+			return cb();
+		}
 
-			return;
+		if (res.statusCode !== 200) {
+			return cb(new Error('Unexpected status code: ' + res.statusCode + '.'));
 		}
 
 		output = fs.createWriteStream(IANA_RAW_CACHE);
@@ -161,9 +161,7 @@ function run(callback) {
 
 		output.on('finish', function() {
 			convert();
-			if (callback) {
-				callback();
-			}
+			cb();
 		});
 	});
 }

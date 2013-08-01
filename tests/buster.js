@@ -24,7 +24,7 @@ config.LanguageTagsTests = {
     sources: [
         'lib/Tag.js',
 		'lib/Subtag.js',
-		'language-tags.js'
+		'index.js'
     ],
     tests: [
         'tests/lib/TagTest.js',

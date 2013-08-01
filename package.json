@@ -3,7 +3,7 @@
 	"version": "0.0.3",
 	"implements": ["CommonJS/Modules/1.0"],
 	"description": "Work with language tags.",
-	"main": "language-tags.js",
+	"main": "index.js",
 	"homepage": "https://github.com/mattcg/language-tags",
 	"repository": {
 		"type": "git",

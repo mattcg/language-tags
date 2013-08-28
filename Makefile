@@ -1,25 +1,40 @@
+test: node_modules lib test
+	TEST_LIB_PATH="../../lib" ./node_modules/.bin/mocha \
+		--recursive \
+		--reporter dot \
+		--check-leaks \
+		--ui tdd
+
+test-cov: build/coverage.html
+
+build/lib-coverage: build lib
+	jscoverage \
+		--no-highlight \
+		lib \
+		build/lib-coverage
+
+build/coverage.html: build/lib-coverage test node_modules
+	TEST_LIB_PATH="../../build/lib-coverage" ./node_modules/.bin/mocha \
+		--recursive \
+		--reporter html-cov \
+		--ui tdd \
+		> $@
+
 node_modules: package.json
 	npm install
-	touch node_modules
+	touch $@
 
-build/logs/jscoverage/coverage.lcov: node_modules
-	npm test
-
-build/logs/jscoverage/html: build/logs/jscoverage/coverage.lcov
-	genhtml \
-		--output-directory build/logs/jscoverage/html \
-		build/logs/jscoverage/coverage.lcov
-
-test: build/logs/jscoverage/html
+build:
+	if [ ! -d $@ ]; then \
+		mkdir $@; \
+	fi;
 
 update:
 	./bin/import
 
 clean:
 	rm -rf \
-		build/logs/jscoverage/*.lcov \
-		build/logs/jscoverage/html \
-		node_modules \
+		build \
 		scripts/cache/language-subtag-registry
 
-.PHONY: test update clean
+.PHONY: test test-cov update clean

@@ -2,7 +2,7 @@
 	"name": "language-tags",
 	"version": "0.0.3",
 	"implements": ["CommonJS/Modules/1.0"],
-	"description": "Work with language tags.",
+	"description": "Work with IANA language tags.",
 	"main": "index.js",
 	"homepage": "https://github.com/mattcg/language-tags",
 	"repository": {

@@ -9,6 +9,12 @@ Based on [BCP 47](http://tools.ietf.org/html/bcp47) ([RFC 5646](http://tools.iet
 
 This project will be updated as the standards change. Changes in the registry will result in the revision number being bumped.
 
+## Raw data ##
+
+[![Open Data](http://assets.okfn.org/images/ok_buttons/od_80x15_blue.png)](http://opendefinition.org/)
+
+See `lib/data/` for all the JSON files available. The `registry.json` file contains all records in a flat array and `meta.json` contains its metadata. There's a separate JSON file for each 'scope' (e.g. `macrolanguage.json`) and 'type' (e.g. `language.json`). These files contain JSON objects keyed by tag or subtag and with the index integer for the corresponding entry in `registry.json` as a value.
+
 ## Usage ##
 
 ```js
@@ -242,10 +248,6 @@ For grandfathered or redundant tags, returns a date string reflecting the date t
 #### tag.descriptions() ####
 
 Returns an array of tag descriptions for grandfathered or redundant tags, otherwise returns an empty array.
-
-## Raw data ##
-
-See `lib/data/` for all the JSON files available. The `registry.json` file contains all records in a flat array and `meta.json` contains its metadata. There's a separate JSON file for each 'scope' (e.g. `macrolanguage.json`) and 'type' (e.g. `language.json`). These files contain JSON objects keyed by tag or subtag and with the index integer for the corresponding entry in `registry.json` as a value.
 
 ## Updating ##
 

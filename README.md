@@ -1,6 +1,7 @@
 # IANA Language Tags for JavaScript #
 
 [![Build Status](https://travis-ci.org/mattcg/language-tags.png?branch=master)](https://travis-ci.org/mattcg/language-tags)
+[![Coverage Status](https://coveralls.io/repos/mattcg/language-tags/badge.png)](https://coveralls.io/r/mattcg/language-tags)
 
 Takes the headache out of working with language tags in JavaScript. Provides an easy objected oriented API as well as [raw data](#raw-data) in neatly organized JSON files if you prefer to work with those.
 

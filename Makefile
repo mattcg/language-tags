@@ -10,7 +10,7 @@ test-coveralls: build/lib-coverage test/lib node_modules
 		--recursive \
 		--reporter mocha-lcov-reporter \
 		--ui tdd | \
-		./node_modules/coveralls/bin/coveralls.js build/lib-coverage
+		./node_modules/coveralls/bin/coveralls.js
 
 test-cov: build/coverage.html
 
@@ -21,8 +21,8 @@ build/coverage.html: build/lib-coverage test/lib node_modules
 		--ui tdd \
 		> $@
 
-build/lib-coverage: build lib
-	jscoverage \
+build/lib-coverage: build lib node_modules
+	./node_modules/.bin/jscoverage \
 		--no-highlight \
 		lib \
 		build/lib-coverage

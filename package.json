@@ -36,6 +36,7 @@
 		"language"
 	],
 	"devDependencies": {
+		"jscoverage": "0.x",
 		"mocha": "1.x",
 		"mocha-lcov-reporter" : "0.x",
 		"coveralls": "2.x"

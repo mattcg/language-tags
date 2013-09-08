@@ -15,7 +15,7 @@ This project will be updated as the standards change. Changes in the registry wi
 
 See `lib/data/` for all the JSON files available. The `registry.json` file contains all records in a flat array and `meta.json` contains its metadata. There's a separate JSON file for each 'scope' (e.g. `macrolanguage.json`) and 'type' (e.g. `language.json`). These files contain JSON objects keyed by tag or subtag and with the index integer for the corresponding entry in `registry.json` as a value.
 
-## Usage ##
+## API ##
 
 ```js
 var tags = require('language-tags')

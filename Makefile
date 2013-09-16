@@ -44,4 +44,4 @@ clean:
 		build \
 		scripts/cache/language-subtag-registry
 
-.PHONY: test test-cov update clean
+.PHONY: test test-cov test-coveralls update clean

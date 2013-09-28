@@ -4823,7 +4823,7 @@
 		"Type": "language",
 		"Subtag": "asj",
 		"Description": [
-			"Nsari"
+			"Sari"
 		],
 		"Added": "2009-07-29"
 	},
@@ -5647,6 +5647,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "axl",
+		"Description": [
+			"Lower Southern Aranda"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "axm",
 		"Description": [
 			"Middle Armenian"
@@ -5657,7 +5665,7 @@
 		"Type": "language",
 		"Subtag": "axx",
 		"Description": [
-			"Xaragure"
+			"Xârâgurè"
 		],
 		"Added": "2009-07-29"
 	},
@@ -7866,6 +7874,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "bjp",
+		"Description": [
+			"Fanamaket"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "bjq",
 		"Description": [
 			"Southern Betsimisaraka Malagasy"
@@ -8957,7 +8973,7 @@
 		"Type": "language",
 		"Subtag": "bpa",
 		"Description": [
-			"Dakaka"
+			"Daakaka"
 		],
 		"Added": "2009-07-29"
 	},
@@ -9013,7 +9029,8 @@
 		"Type": "language",
 		"Subtag": "bpk",
 		"Description": [
-			"Orowe"
+			"Orowe",
+			"'Ôrôê"
 		],
 		"Added": "2009-07-29"
 	},
@@ -9157,7 +9174,8 @@
 		"Type": "language",
 		"Subtag": "bqc",
 		"Description": [
-			"Boko (Benin)"
+			"Boko (Benin)",
+			"Boo"
 		],
 		"Added": "2009-07-29"
 	},
@@ -10262,6 +10280,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "bvp",
+		"Description": [
+			"Bumang"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "bvq",
 		"Description": [
 			"Birri"
@@ -10538,7 +10564,7 @@
 		"Type": "language",
 		"Subtag": "bxa",
 		"Description": [
-			"Bauro"
+			"Tairaha"
 		],
 		"Added": "2009-07-29"
 	},
@@ -10578,9 +10604,13 @@
 		"Type": "language",
 		"Subtag": "bxf",
 		"Description": [
-			"Bilur"
+			"Bilur",
+			"Minigir"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Comments": [
+			"see also vmg"
+		]
 	},
 	{
 		"Type": "language",
@@ -11106,7 +11136,7 @@
 		"Type": "language",
 		"Subtag": "bzv",
 		"Description": [
-			"Bebe"
+			"Naami"
 		],
 		"Added": "2009-07-29"
 	},
@@ -12129,7 +12159,9 @@
 		"Type": "language",
 		"Subtag": "cir",
 		"Description": [
-			"Tiri"
+			"Tiri",
+			"Haméa",
+			"Méa"
 		],
 		"Added": "2009-07-29"
 	},
@@ -12291,6 +12323,14 @@
 			"Cibak"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "ckn",
+		"Description": [
+			"Kaang Chin"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -12967,6 +13007,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "cpo",
+		"Description": [
+			"Kpeego"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "cpp",
 		"Description": [
 			"Portuguese-based creoles and pidgins"
@@ -13296,6 +13344,14 @@
 			"Coast Miwok"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "csj",
+		"Description": [
+			"Songlai Chin"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -13866,7 +13922,11 @@
 		"Description": [
 			"Dan"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2013-09-10",
+		"Comments": [
+			"see dnj, lda"
+		]
 	},
 	{
 		"Type": "language",
@@ -14022,7 +14082,7 @@
 		"Type": "language",
 		"Subtag": "dba",
 		"Description": [
-			"Bangi Me"
+			"Bangime"
 		],
 		"Added": "2009-07-29"
 	},
@@ -14538,7 +14598,7 @@
 		"Type": "language",
 		"Subtag": "dgt",
 		"Description": [
-			"Ndrag'ngith"
+			"Ndra'ngith"
 		],
 		"Added": "2012-08-12"
 	},
@@ -14596,6 +14656,7 @@
 		"Type": "language",
 		"Subtag": "dhg",
 		"Description": [
+			"Djangu",
 			"Dhangu"
 		],
 		"Added": "2009-07-29"
@@ -14668,7 +14729,8 @@
 		"Type": "language",
 		"Subtag": "dhv",
 		"Description": [
-			"Dehu"
+			"Dehu",
+			"Drehu"
 		],
 		"Added": "2009-07-29"
 	},
@@ -14679,6 +14741,14 @@
 			"Dhanwar (Nepal)"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "dhx",
+		"Description": [
+			"Dhungaloo"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -14959,7 +15029,11 @@
 		"Description": [
 			"Djiwarli"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2013-09-10",
+		"Comments": [
+			"see dze, iin"
+		]
 	},
 	{
 		"Type": "language",
@@ -15072,6 +15146,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "dlk",
+		"Description": [
+			"Dahalik"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "dlm",
 		"Description": [
 			"Dalmatian"
@@ -15106,7 +15188,7 @@
 		"Type": "language",
 		"Subtag": "dmc",
 		"Description": [
-			"Dimir"
+			"Gavak"
 		],
 		"Added": "2009-07-29"
 	},
@@ -15210,6 +15292,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "dmw",
+		"Description": [
+			"Mudburra"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "dmx",
 		"Description": [
 			"Dema"
@@ -15264,6 +15354,14 @@
 			"Lower Grand Valley Dani"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "dnj",
+		"Description": [
+			"Dan"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -15877,7 +15975,8 @@
 		"Type": "language",
 		"Subtag": "duf",
 		"Description": [
-			"Dumbea"
+			"Dumbea",
+			"Drubea"
 		],
 		"Added": "2009-07-29"
 	},
@@ -16185,6 +16284,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "dze",
+		"Description": [
+			"Djiwarli"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "dzg",
 		"Description": [
 			"Dazaga"
@@ -16206,6 +16313,14 @@
 			"Dzando"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "eaa",
+		"Description": [
+			"Karenggapa"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -16393,6 +16508,14 @@
 			"Ekajuk"
 		],
 		"Added": "2005-10-16"
+	},
+	{
+		"Type": "language",
+		"Subtag": "ekc",
+		"Description": [
+			"Eastern Karnic"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -17138,6 +17261,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "eza",
+		"Description": [
+			"Ezaa"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "eze",
 		"Description": [
 			"Uzekwe"
@@ -17156,7 +17287,7 @@
 		"Type": "language",
 		"Subtag": "fab",
 		"Description": [
-			"Fa D'ambu"
+			"Fa d'Ambu"
 		],
 		"Added": "2009-07-29"
 	},
@@ -17951,7 +18082,7 @@
 		"Type": "language",
 		"Subtag": "gal",
 		"Description": [
-			"Galoli"
+			"Galolen"
 		],
 		"Added": "2009-07-29"
 	},
@@ -18250,6 +18381,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "gbw",
+		"Description": [
+			"Gabi-Gabi"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "gbx",
 		"Description": [
 			"Eastern Xwla Gbe"
@@ -18480,6 +18619,14 @@
 			"Ghandruk Sign Language"
 		],
 		"Added": "2012-08-12"
+	},
+	{
+		"Type": "language",
+		"Subtag": "gdt",
+		"Description": [
+			"Kungardutyi"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -18739,7 +18886,11 @@
 		"Description": [
 			"Aghu Tharnggalu"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2013-09-10",
+		"Comments": [
+			"see ggm, gtu, ikr"
+		]
 	},
 	{
 		"Type": "language",
@@ -18753,7 +18904,8 @@
 		"Type": "language",
 		"Subtag": "ggu",
 		"Description": [
-			"Gagu"
+			"Gagu",
+			"Gban"
 		],
 		"Added": "2009-07-29"
 	},
@@ -18896,6 +19048,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "gih",
+		"Description": [
+			"Githabul"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "gil",
 		"Description": [
 			"Gilbertese"
@@ -19028,6 +19188,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "gjm",
+		"Description": [
+			"Gunditjmara"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "gjn",
 		"Description": [
 			"Gonja"
@@ -19131,6 +19299,14 @@
 			"Gilaki"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "gll",
+		"Description": [
+			"Garlali"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -19287,6 +19463,14 @@
 			"Mycenaean Greek"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "gmz",
+		"Description": [
+			"Mgbolizhia"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -19972,6 +20156,14 @@
 			"Gbati-ri"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "gtu",
+		"Description": [
+			"Aghu-Tharnggala"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -21624,6 +21816,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "hrc",
+		"Description": [
+			"Niwer Mil"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "hre",
 		"Description": [
 			"Hre"
@@ -21657,6 +21857,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "hrp",
+		"Description": [
+			"Nhirrpi"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "hrr",
 		"Description": [
 			"Horuru"
@@ -21680,6 +21888,14 @@
 			"Hruso"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "hrw",
+		"Description": [
+			"Warwar Feni"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -22025,7 +22241,8 @@
 		"Type": "language",
 		"Subtag": "hwc",
 		"Description": [
-			"Hawai'i Creole English"
+			"Hawai'i Creole English",
+			"Hawai'i Pidgin"
 		],
 		"Added": "2009-07-29"
 	},
@@ -22238,7 +22455,8 @@
 		"Type": "language",
 		"Subtag": "idc",
 		"Description": [
-			"Idon"
+			"Idon",
+			"Ajiya"
 		],
 		"Added": "2009-07-29"
 	},
@@ -22469,6 +22687,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "iin",
+		"Description": [
+			"Thiin"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "iir",
 		"Description": [
 			"Indo-Iranian languages"
@@ -22573,6 +22799,14 @@
 			"Ikpeshi"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "ikr",
+		"Description": [
+			"Ikaranggal"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -22702,7 +22936,9 @@
 		"Description": [
 			"Talur"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2013-09-10",
+		"Preferred-Value": "gal"
 	},
 	{
 		"Type": "language",
@@ -22937,6 +23173,14 @@
 			"Iquito"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "iqw",
+		"Description": [
+			"Ikwo"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -23379,7 +23623,11 @@
 		"Description": [
 			"Izi-Ezaa-Ikwo-Mgbo"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2013-09-10",
+		"Comments": [
+			"see eza, gmz, iqw, izz"
+		]
 	},
 	{
 		"Type": "language",
@@ -23388,6 +23636,14 @@
 			"Izere"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "izz",
+		"Description": [
+			"Izii"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -23572,6 +23828,14 @@
 			"Judeo-Berber"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "jbi",
+		"Description": [
+			"Badjiri"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -25122,7 +25386,8 @@
 		"Type": "language",
 		"Subtag": "kdk",
 		"Description": [
-			"Numee"
+			"Numèè",
+			"Kwényi"
 		],
 		"Added": "2009-07-29"
 	},
@@ -30173,9 +30438,7 @@
 		"Description": [
 			"Luhu"
 		],
-		"Added": "2009-07-29",
-		"Deprecated": "2012-08-12",
-		"Preferred-Value": "ppr"
+		"Added": "2009-07-29"
 	},
 	{
 		"Type": "language",
@@ -30184,6 +30447,14 @@
 			"Lisabata-Nuniali"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "lda",
+		"Description": [
+			"Kla-Dan"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -30895,6 +31166,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "lja",
+		"Description": [
+			"Golpa"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "lje",
 		"Description": [
 			"Rampi"
@@ -30924,6 +31203,22 @@
 			"Lampung Api"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "ljw",
+		"Description": [
+			"Yirandali"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
+		"Subtag": "ljx",
+		"Description": [
+			"Yuru"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -31001,6 +31296,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "lkm",
+		"Description": [
+			"Kalaamaya"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "lkn",
 		"Description": [
 			"Lakon",
@@ -31043,6 +31346,14 @@
 			"Lakota"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "lku",
+		"Description": [
+			"Kungkari"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -31508,6 +31819,14 @@
 			"Longuda"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "lnw",
+		"Description": [
+			"Lanima"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -32329,6 +32648,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "lwu",
+		"Description": [
+			"Lawu"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "lww",
 		"Description": [
 			"Lewo"
@@ -32477,7 +32804,8 @@
 		"Type": "language",
 		"Subtag": "man",
 		"Description": [
-			"Mandingo"
+			"Mandingo",
+			"Manding"
 		],
 		"Added": "2005-10-16",
 		"Scope": "macrolanguage"
@@ -33218,7 +33546,9 @@
 		"Description": [
 			"Mea"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2013-09-10",
+		"Preferred-Value": "cir"
 	},
 	{
 		"Type": "language",
@@ -33338,7 +33668,7 @@
 		"Type": "language",
 		"Subtag": "mev",
 		"Description": [
-			"Mann"
+			"Mano"
 		],
 		"Added": "2009-07-29"
 	},
@@ -33420,7 +33750,7 @@
 		"Type": "language",
 		"Subtag": "mfg",
 		"Description": [
-			"Mixifore"
+			"Mogofin"
 		],
 		"Added": "2009-07-29"
 	},
@@ -34069,7 +34399,8 @@
 		"Type": "language",
 		"Subtag": "mij",
 		"Description": [
-			"Abar"
+			"Abar",
+			"Mungbam"
 		],
 		"Added": "2009-07-29"
 	},
@@ -34620,7 +34951,8 @@
 		"Description": [
 			"Malakhel"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -35140,7 +35472,11 @@
 		"Description": [
 			"Maykulan"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2013-09-10",
+		"Comments": [
+			"see wnn, xyj, xyk, xyt"
+		]
 	},
 	{
 		"Type": "language",
@@ -36410,7 +36746,7 @@
 		"Type": "language",
 		"Subtag": "muc",
 		"Description": [
-			"Mbu'"
+			"Ajumbu"
 		],
 		"Added": "2009-07-29"
 	},
@@ -36811,7 +37147,11 @@
 		"Description": [
 			"Mudbura"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2013-09-10",
+		"Comments": [
+			"see dmw, xrq"
+		]
 	},
 	{
 		"Type": "language",
@@ -37331,6 +37671,7 @@
 			"Forest Maninka"
 		],
 		"Added": "2009-07-29",
+		"Deprecated": "2013-09-10",
 		"Macrolanguage": "man"
 	},
 	{
@@ -37988,7 +38329,11 @@
 		"Description": [
 			"Ngura"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2013-09-10",
+		"Comments": [
+			"see ekc, gll, jbi, xpt, xwk"
+		]
 	},
 	{
 		"Type": "language",
@@ -38687,7 +39032,7 @@
 		"Type": "language",
 		"Subtag": "ngk",
 		"Description": [
-			"Ngalkbun"
+			"Dalabon"
 		],
 		"Added": "2009-07-29"
 	},
@@ -39616,11 +39961,23 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "nlq",
+		"Description": [
+			"Lao Naga"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "nlr",
 		"Description": [
 			"Ngarla"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2013-09-10",
+		"Comments": [
+			"see nrk, ywg"
+		]
 	},
 	{
 		"Type": "language",
@@ -39637,6 +39994,14 @@
 			"Orizaba Nahuatl"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "nlw",
+		"Description": [
+			"Walangama"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -40156,6 +40521,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "nol",
+		"Description": [
+			"Nomlaki"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "nom",
 		"Description": [
 			"Nocamán"
@@ -40387,6 +40760,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "nqq",
+		"Description": [
+			"Kyan-Karyaw Naga"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "nqy",
 		"Description": [
 			"Akyaung Ari Naga"
@@ -40443,6 +40824,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "nrk",
+		"Description": [
+			"Ngarla"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "nrl",
 		"Description": [
 			"Ngarluma"
@@ -40477,7 +40866,8 @@
 		"Type": "language",
 		"Subtag": "nrr",
 		"Description": [
-			"Norra"
+			"Norra",
+			"Nora"
 		],
 		"Added": "2009-07-29"
 	},
@@ -40718,6 +41108,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "ntg",
+		"Description": [
+			"Ngantangarra"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "nti",
 		"Description": [
 			"Natioro"
@@ -40827,7 +41225,7 @@
 		"Type": "language",
 		"Subtag": "nua",
 		"Description": [
-			"Yuaga"
+			"Yuanga"
 		],
 		"Added": "2009-07-29"
 	},
@@ -42013,6 +42411,14 @@
 			"Olekha"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "olk",
+		"Description": [
+			"Olkol"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -43322,7 +43728,9 @@
 		"Description": [
 			"Panang"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2013-09-10",
+		"Preferred-Value": "adx"
 	},
 	{
 		"Type": "language",
@@ -44509,11 +44917,30 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "pnj",
+		"Description": [
+			"Pinjarup"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "pnk",
 		"Description": [
 			"Paunaka"
 		],
 		"Added": "2012-08-12"
+	},
+	{
+		"Type": "language",
+		"Subtag": "pnl",
+		"Description": [
+			"Paleni"
+		],
+		"Added": "2013-09-10",
+		"Comments": [
+			"see also wbf"
+		]
 	},
 	{
 		"Type": "language",
@@ -44723,7 +45150,7 @@
 		"Type": "language",
 		"Subtag": "pop",
 		"Description": [
-			"Pwapwa"
+			"Pwapwâ"
 		],
 		"Added": "2009-07-29"
 	},
@@ -44879,7 +45306,9 @@
 		"Description": [
 			"Piru"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2013-09-10",
+		"Preferred-Value": "lcq"
 	},
 	{
 		"Type": "language",
@@ -45576,6 +46005,14 @@
 			"Gapapaiwa"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "pwi",
+		"Description": [
+			"Patwin"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -46785,6 +47222,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "rkw",
+		"Description": [
+			"Arakwal"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "rma",
 		"Description": [
 			"Rama"
@@ -47430,6 +47875,22 @@
 		],
 		"Added": "2009-07-29",
 		"Macrolanguage": "mwr"
+	},
+	{
+		"Type": "language",
+		"Subtag": "rxd",
+		"Description": [
+			"Ngardi"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
+		"Subtag": "rxw",
+		"Description": [
+			"Karuwali"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -48862,7 +49323,8 @@
 		"Type": "language",
 		"Subtag": "sih",
 		"Description": [
-			"Zire"
+			"Zire",
+			"Sîshëë"
 		],
 		"Added": "2009-07-29"
 	},
@@ -50895,6 +51357,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "sty",
+		"Description": [
+			"Siberian Tatar"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "sua",
 		"Description": [
 			"Sulka"
@@ -51092,6 +51562,14 @@
 			"Slovakian Sign Language"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "svm",
+		"Description": [
+			"Slavomolisano"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -52641,7 +53119,11 @@
 		"Description": [
 			"Tangga"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2013-09-10",
+		"Comments": [
+			"see bjp, hrc, hrw"
+		]
 	},
 	{
 		"Type": "language",
@@ -53207,6 +53689,14 @@
 			"Tjurruru"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "tjw",
+		"Description": [
+			"Djabwurrung"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -53897,7 +54387,7 @@
 		"Type": "language",
 		"Subtag": "tnr",
 		"Description": [
-			"Bedik"
+			"Ménik"
 		],
 		"Added": "2009-07-29"
 	},
@@ -55623,7 +56113,7 @@
 		"Type": "language",
 		"Subtag": "tye",
 		"Description": [
-			"Kyenga"
+			"Kyanga"
 		],
 		"Added": "2009-07-29"
 	},
@@ -55754,6 +56244,14 @@
 			"Tz'utujil"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "tzl",
+		"Description": [
+			"Talossan"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -56135,6 +56633,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "ule",
+		"Description": [
+			"Lule"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "ulf",
 		"Description": [
 			"Usku",
@@ -56355,6 +56861,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "unn",
+		"Description": [
+			"Kurnai"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "unp",
 		"Description": [
 			"Worora"
@@ -56372,6 +56886,14 @@
 			"Mundari"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "unu",
+		"Description": [
+			"Unubahe"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -56725,7 +57247,8 @@
 		"Type": "language",
 		"Subtag": "uve",
 		"Description": [
-			"West Uvean"
+			"West Uvean",
+			"Fagauvea"
 		],
 		"Added": "2009-07-29"
 	},
@@ -57187,7 +57710,7 @@
 		"Type": "language",
 		"Subtag": "vmb",
 		"Description": [
-			"Mbabaram"
+			"Barbaram"
 		],
 		"Added": "2009-07-29"
 	},
@@ -57227,9 +57750,12 @@
 		"Type": "language",
 		"Subtag": "vmg",
 		"Description": [
-			"Minigir"
+			"Lungalunga"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Comments": [
+			"see also bxf"
+		]
 	},
 	{
 		"Type": "language",
@@ -57690,7 +58216,8 @@
 		"Type": "language",
 		"Subtag": "wax",
 		"Description": [
-			"Watam"
+			"Watam",
+			"Marangis"
 		],
 		"Added": "2009-07-29"
 	},
@@ -57740,7 +58267,10 @@
 		"Description": [
 			"Wara"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Comments": [
+			"see also pnl"
+		]
 	},
 	{
 		"Type": "language",
@@ -57881,11 +58411,27 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "wdk",
+		"Description": [
+			"Wadikali"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "wdu",
 		"Description": [
 			"Wadjigu"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "wdy",
+		"Description": [
+			"Wadjabangayi"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -57910,6 +58456,14 @@
 			"Wedau"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "weg",
+		"Description": [
+			"Wergaia"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -58219,7 +58773,11 @@
 		"Description": [
 			"Wintu"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2013-09-10",
+		"Comments": [
+			"see nol, pwi, wnw"
+		]
 	},
 	{
 		"Type": "language",
@@ -58321,6 +58879,14 @@
 			"Wakawaka"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "wky",
+		"Description": [
+			"Wangkayutyuru"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -58628,6 +59194,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "wnn",
+		"Description": [
+			"Wunumara"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "wno",
 		"Description": [
 			"Wano"
@@ -58649,6 +59223,14 @@
 			"Usan"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "wnw",
+		"Description": [
+			"Wintu"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -59021,6 +59603,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "wth",
+		"Description": [
+			"Wathawurrung"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "wti",
 		"Description": [
 			"Berta"
@@ -59207,6 +59797,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "wxw",
+		"Description": [
+			"Wardandi"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "wya",
 		"Description": [
 			"Wyandot"
@@ -59220,6 +59818,14 @@
 			"Wangaaybuwan-Ngiyambaa"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "wyi",
+		"Description": [
+			"Woiwurrung"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -59432,11 +60038,43 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "xbd",
+		"Description": [
+			"Bindal"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
+		"Subtag": "xbe",
+		"Description": [
+			"Bigambal"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
+		"Subtag": "xbg",
+		"Description": [
+			"Bunganditj"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "xbi",
 		"Description": [
 			"Kombio"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "xbj",
+		"Description": [
+			"Birrpayi"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -59464,6 +60102,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "xbp",
+		"Description": [
+			"Bibbulman"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "xbr",
 		"Description": [
 			"Kambera"
@@ -59485,6 +60131,14 @@
 			"Kabixí"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "xby",
+		"Description": [
+			"Batyala"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -59609,11 +60263,27 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "xda",
+		"Description": [
+			"Darkinyung"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "xdc",
 		"Description": [
 			"Dacian"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "xdk",
+		"Description": [
+			"Dharuk"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -59737,6 +60407,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "xgd",
+		"Description": [
+			"Gudang"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "xgf",
 		"Description": [
 			"Gabrielino-Fernandeño"
@@ -59745,11 +60423,35 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "xgg",
+		"Description": [
+			"Goreng"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
+		"Subtag": "xgi",
+		"Description": [
+			"Garingbal"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "xgl",
 		"Description": [
 			"Galindan"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "xgm",
+		"Description": [
+			"Guwinmal"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -59775,6 +60477,14 @@
 			"Unggumi"
 		],
 		"Added": "2012-08-12"
+	},
+	{
+		"Type": "language",
+		"Subtag": "xgw",
+		"Description": [
+			"Guwa"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -59847,7 +60557,9 @@
 		"Description": [
 			"Xiandao"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2013-09-10",
+		"Preferred-Value": "acn"
 	},
 	{
 		"Type": "language",
@@ -59912,6 +60624,22 @@
 			"Xipaya"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "xjb",
+		"Description": [
+			"Minjungbal"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
+		"Subtag": "xjt",
+		"Description": [
+			"Jaitmatang"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -60464,6 +61192,22 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "xni",
+		"Description": [
+			"Ngarigu"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
+		"Subtag": "xnk",
+		"Description": [
+			"Nganakarti"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "xnn",
 		"Description": [
 			"Northern Kankanay"
@@ -60502,6 +61246,22 @@
 			"Narragansett"
 		],
 		"Added": "2010-03-11"
+	},
+	{
+		"Type": "language",
+		"Subtag": "xnu",
+		"Description": [
+			"Nukunul"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
+		"Subtag": "xny",
+		"Description": [
+			"Nyiyaparli"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -60599,6 +61359,14 @@
 			"Kowaki"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "xpa",
+		"Description": [
+			"Pirriya"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -60707,6 +61475,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "xpt",
+		"Description": [
+			"Punthamara"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "xpu",
 		"Description": [
 			"Punic"
@@ -60755,11 +61531,27 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "xrd",
+		"Description": [
+			"Gundungurra"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "xre",
 		"Description": [
 			"Kreye"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "xrg",
+		"Description": [
+			"Minang"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -60784,6 +61576,14 @@
 			"Arin"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "xrq",
+		"Description": [
+			"Karranga"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -61020,6 +61820,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "xth",
+		"Description": [
+			"Yitha Yitha"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "xti",
 		"Description": [
 			"Sinicahua Mixtec"
@@ -61116,6 +61924,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "xtv",
+		"Description": [
+			"Thawa"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "xtw",
 		"Description": [
 			"Tawandê"
@@ -61180,6 +61996,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "xul",
+		"Description": [
+			"Ngunawal"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "xum",
 		"Description": [
 			"Umbrian"
@@ -61190,7 +62014,7 @@
 		"Type": "language",
 		"Subtag": "xun",
 		"Description": [
-			"Unggarranggu"
+			"Unggaranggu"
 		],
 		"Added": "2012-08-12"
 	},
@@ -61292,6 +62116,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "xwd",
+		"Description": [
+			"Wadi Wadi"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "xwe",
 		"Description": [
 			"Xwela Gbe"
@@ -61305,6 +62137,22 @@
 			"Kwegu"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "xwj",
+		"Description": [
+			"Wajuk"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
+		"Subtag": "xwk",
+		"Description": [
+			"Wangkumara"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -61332,6 +62180,22 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "xwt",
+		"Description": [
+			"Wotjobaluk"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
+		"Subtag": "xww",
+		"Description": [
+			"Wemba Wemba"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "xxb",
 		"Description": [
 			"Boro (Ghana)"
@@ -61345,6 +62209,14 @@
 			"Ke'o"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "xxm",
+		"Description": [
+			"Minkin"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -61364,11 +62236,51 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "xya",
+		"Description": [
+			"Yaygir"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
+		"Subtag": "xyb",
+		"Description": [
+			"Yandjibara"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
+		"Subtag": "xyj",
+		"Description": [
+			"Mayi-Yapi"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
+		"Subtag": "xyk",
+		"Description": [
+			"Mayi-Kulan"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "xyl",
 		"Description": [
 			"Yalakalore"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "xyt",
+		"Description": [
+			"Mayi-Thakurti"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -61758,6 +62670,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "yda",
+		"Description": [
+			"Yanda"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "ydd",
 		"Description": [
 			"Eastern Yiddish"
@@ -61915,6 +62835,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "ygi",
+		"Description": [
+			"Yiningayi"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "ygl",
 		"Description": [
 			"Yangum Gel"
@@ -61944,6 +62872,14 @@
 			"Yagaria"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "ygu",
+		"Description": [
+			"Yugul"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -62129,7 +63065,11 @@
 		"Description": [
 			"Yir Yoront"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2013-09-10",
+		"Comments": [
+			"see yrm, yyr"
+		]
 	},
 	{
 		"Type": "language",
@@ -62327,7 +63267,8 @@
 		"Type": "language",
 		"Subtag": "yly",
 		"Description": [
-			"Nyâlayu"
+			"Nyâlayu",
+			"Nyelâyu"
 		],
 		"Added": "2009-07-29"
 	},
@@ -62652,7 +63593,9 @@
 		"Description": [
 			"Yos"
 		],
-		"Added": "2009-07-29"
+		"Added": "2009-07-29",
+		"Deprecated": "2013-09-10",
+		"Preferred-Value": "zom"
 	},
 	{
 		"Type": "language",
@@ -62809,6 +63752,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "yrm",
+		"Description": [
+			"Yirrk-Mel"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "yrn",
 		"Description": [
 			"Yerong"
@@ -62830,6 +63781,14 @@
 			"Yarawata"
 		],
 		"Added": "2009-07-29"
+	},
+	{
+		"Type": "language",
+		"Subtag": "yry",
+		"Description": [
+			"Yarluyandi"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -62942,6 +63901,14 @@
 			"Yout Wam"
 		],
 		"Added": "2010-03-11"
+	},
+	{
+		"Type": "language",
+		"Subtag": "yty",
+		"Description": [
+			"Yatay"
+		],
+		"Added": "2013-09-10"
 	},
 	{
 		"Type": "language",
@@ -63148,6 +64115,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "ywg",
+		"Description": [
+			"Yinhawangka"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "ywl",
 		"Description": [
 			"Western Lalu"
@@ -63205,6 +64180,14 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "yxa",
+		"Description": [
+			"Mayawali"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "yxg",
 		"Description": [
 			"Yagara"
@@ -63213,11 +64196,43 @@
 	},
 	{
 		"Type": "language",
+		"Subtag": "yxl",
+		"Description": [
+			"Yardliyawarra"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
+		"Subtag": "yxm",
+		"Description": [
+			"Yinwum"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
+		"Subtag": "yxu",
+		"Description": [
+			"Yuyu"
+		],
+		"Added": "2013-09-10"
+	},
+	{
+		"Type": "language",
 		"Subtag": "yxy",
 		"Description": [
 			"Yabula Yabula"
 		],
 		"Added": "2012-08-12"
+	},
+	{
+		"Type": "language",
+		"Subtag": "yyr",
+		"Description": [
+			"Yir Yoront"
+		],
+		"Added": "2013-09-03"
 	},
 	{
 		"Type": "language",
@@ -64782,7 +65797,7 @@
 		"Type": "language",
 		"Subtag": "zyp",
 		"Description": [
-			"Zyphe"
+			"Zyphe Chin"
 		],
 		"Added": "2009-07-29"
 	},

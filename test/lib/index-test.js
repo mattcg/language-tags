@@ -15,7 +15,7 @@ var tags = require(process.env.TEST_LIB_PATH);
 suite('tags', function() {
 
 	test('date() returns file date', function() {
-		assert.equal(tags.date(), '2013-02-28');
+		assert.equal(tags.date(), '2013-09-23');
 	});
 
 	test('type() returns subtag by type', function() {

@@ -3,17 +3,13 @@
 [![Build Status](https://travis-ci.org/mattcg/language-tags.png?branch=master)](https://travis-ci.org/mattcg/language-tags)
 [![Coverage Status](https://coveralls.io/repos/mattcg/language-tags/badge.png)](https://coveralls.io/r/mattcg/language-tags)
 
-Takes the headache out of working with language tags in JavaScript. Provides an easy objected oriented API as well as [raw data](#raw-data) in neatly organized JSON files if you prefer to work with those.
-
 Based on [BCP 47](http://tools.ietf.org/html/bcp47) ([RFC 5646](http://tools.ietf.org/html/rfc5646)) and the latest [IANA language subtag registry](http://www.iana.org/assignments/language-subtag-registry).
 
-This project will be updated as the standards change. Changes in the registry will result in the revision number being bumped.
+This project will be updated as the standards change.
 
-## Raw data ##
+## JSON data ##
 
-[![Open Data](http://assets.okfn.org/images/ok_buttons/od_80x15_blue.png)](http://opendefinition.org/)
-
-See `lib/data/` for all the JSON files available. The `registry.json` file contains all records in a flat array and `meta.json` contains its metadata. There's a separate JSON file for each 'scope' (e.g. `macrolanguage.json`) and 'type' (e.g. `language.json`). These files contain JSON objects keyed by tag or subtag and with the index integer for the corresponding entry in `registry.json` as a value.
+See the [language-subtag-registry](https://github.com/mattcg/language-subtag-registry) project for the underlying JSON data.
 
 ## API ##
 
@@ -249,12 +245,6 @@ For grandfathered or redundant tags, returns a date string reflecting the date t
 
 Returns an array of tag descriptions for grandfathered or redundant tags, otherwise returns an empty array.
 
-## Updating ##
-
-Run `make update` to update data from the latest official IANA-hosted version. The registry file format is converted to JSON automatically and the files in `lib/` are updated.
-
-If there are changes, please make a pull request.
-
 ## Resources ##
 
 - [Language Subtag Lookup tool by Richard Ishida](http://rishida.net/utils/subtags/)
@@ -265,6 +255,6 @@ If there are changes, please make a pull request.
 
 Copyright (c) 2013, [Matthew Caruana Galizia](http://twitter.com/mcaruanagalizia).
 
-The software part of this project is licensed under an [MIT licence](http://mattcg.mit-license.org/). The JSON database is separately licensed an [Open Data Commons Attribution License (ODC-BY)](http://opendatacommons.org/licenses/by/1.0/).
+The software part of this project is licensed under an [MIT licence](http://mattcg.mit-license.org/).
 
 Comments, feedback and suggestions are welcome. Please feel free to raise an issue or pull request. Enjoy.

@@ -36,12 +36,7 @@ build:
 		mkdir $@; \
 	fi;
 
-update:
-	./bin/import
-
 clean:
-	rm -rf \
-		build \
-		scripts/cache/language-subtag-registry
+	rm -rf build
 
-.PHONY: test test-cov test-coveralls update clean
+.PHONY: test test-cov test-coveralls clean

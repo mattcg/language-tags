@@ -1,6 +1,6 @@
 {
 	"name": "language-tags",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"implements": ["CommonJS/Modules/1.0"],
 	"description": "Work with IANA language tags.",
 	"main": "lib/index.js",
@@ -33,8 +33,12 @@
 		"bcp47",
 		"subtags",
 		"rfc5646",
-		"language"
+		"language",
+		"tags"
 	],
+	"dependencies": {
+		"language-subtag-registry": "0.x"
+	},
 	"devDependencies": {
 		"jscoverage": "0.x",
 		"mocha": "1.x",

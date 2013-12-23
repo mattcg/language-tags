@@ -37,7 +37,7 @@
 		"multilingualization"
 	],
 	"dependencies": {
-		"language-subtag-registry": "0.x"
+		"language-subtag-registry": "~0.3.0"
 	},
 	"devDependencies": {
 		"jscoverage": "0.x",

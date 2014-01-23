@@ -41,7 +41,7 @@
 	},
 	"devDependencies": {
 		"jscoverage": "~0.3.8",
-		"mocha": "~1.16.1",
+		"mocha": "~1.17.1",
 		"mocha-lcov-reporter" : "~0.0.1",
 		"coveralls": "~2.6.1"
 	}

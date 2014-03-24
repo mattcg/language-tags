@@ -1,4 +1,4 @@
 .DS_Store
 .coveralls.yml
+coverage/
 node_modules/
-build/

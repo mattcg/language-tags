@@ -1,42 +1,32 @@
 test: lib test/lib node_modules
-	TEST_LIB_PATH="../../lib" ./node_modules/.bin/mocha \
-		--recursive \
-		--reporter dot \
+	TEST_LIB_PATH="../../lib" ./node_modules/.bin/_mocha \
+		--timeout 3000 \
+		--reporter spec \
 		--check-leaks \
-		--ui tdd
-
-test-coveralls: build/lib-coverage test/lib node_modules
-	TEST_LIB_PATH="../../build/lib-coverage" ./node_modules/.bin/mocha \
-		--recursive \
-		--reporter mocha-lcov-reporter \
-		--ui tdd | \
-		./node_modules/coveralls/bin/coveralls.js
-
-test-cov: build/coverage.html
-
-build/coverage.html: build/lib-coverage test/lib node_modules
-	TEST_LIB_PATH="../../build/lib-coverage" ./node_modules/.bin/mocha \
-		--recursive \
-		--reporter html-cov \
 		--ui tdd \
-		> $@
+		--recursive
 
-build/lib-coverage: build lib node_modules
-	./node_modules/.bin/jscoverage \
-		--no-highlight \
-		lib \
-		build/lib-coverage
+test-coverage: lib test/lib node_modules
+	TEST_LIB_PATH="../../lib" ./node_modules/.bin/istanbul \
+		cover ./node_modules/.bin/_mocha \
+			-- \
+			--timeout 3000 \
+			--reporter spec \
+			--check-leaks \
+			--ui tdd \
+			--recursive
+
+view-coverage: test-coverage
+	open coverage/lcov-report/index.html
+
+test-coveralls: test-coverage
+	cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
 
 node_modules: package.json
 	npm install
 	touch $@
 
-build:
-	if [ ! -d $@ ]; then \
-		mkdir $@; \
-	fi;
-
 clean:
-	rm -rf build
+	rm -rf coverage
 
-.PHONY: test test-cov test-coveralls clean
+.PHONY: test test-coverage test-coveralls view-coverage clean

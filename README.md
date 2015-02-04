@@ -247,6 +247,7 @@ Returns an array of tag descriptions for grandfathered or redundant tags, otherw
 
 ## Resources ##
 
+- [Python version by the Flanders Heritage Agency](https://github.com/OnroerendErfgoed/language-tags)
 - [Language Subtag Lookup tool by Richard Ishida](http://rishida.net/utils/subtags/)
 - [W3C Internationalization Checker](http://validator.w3.org/i18n-checker/)
 - [RFC 5646](http://tools.ietf.org/html/rfc5646)

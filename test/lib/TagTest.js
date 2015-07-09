@@ -328,7 +328,7 @@ suite('Tag', function() {
 		var tag;
 
 		// Grandfathered but not deprecated, therefore valid.
-		tag = new Tag('en-GB-oed');
+		tag = new Tag('i-default');
 		assert.equal(tag.type(), 'grandfathered');
 		assert(!tag.deprecated());
 		assert(tag.valid());
@@ -456,7 +456,7 @@ suite('Tag', function() {
 		assert.equal(tag.deprecated(), '2009-07-29');
 
 		// Grandfathered but not deprecated.
-		tag = new Tag('en-GB-oed');
+		tag = new Tag('i-default');
 		assert.equal(tag.type(), 'grandfathered');
 		assert(!tag.deprecated());
 	});
@@ -481,19 +481,19 @@ suite('Tag', function() {
 		assert.equal(tag.added(), '1999-12-18');
 
 		// Grandfathered but not deprecated.
-		tag = new Tag('en-GB-oed');
+		tag = new Tag('i-default');
 		assert.equal(tag.type(), 'grandfathered');
 		assert(!tag.deprecated());
-		assert.equal(tag.added(), '2003-07-09');
+		assert.equal(tag.added(), '1998-03-10');
 	});
 
 	test('tag.description() returns description when available', function() {
 		var tag;
 
-		tag = new Tag('en-GB-oed');
+		tag = new Tag('i-default');
 		assert.equal(tag.type(), 'grandfathered');
 		assert(!tag.deprecated());
-		assert.deepEqual(tag.descriptions(), ['English, Oxford English Dictionary spelling']);
+		assert.deepEqual(tag.descriptions(), ['Default Language']);
 
 		// Otherwise returns an empty array.
 		assert.deepEqual(new Tag('en').descriptions(), []);

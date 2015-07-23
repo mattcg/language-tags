@@ -84,6 +84,16 @@ suite('tags', function() {
 		assert.deepEqual(subtags, []);
 	});
 
+	test('search() puts exact match at the top', function() {
+		var subtags;
+
+		subtags = tags.search('Dari');
+		assert(subtags.length > 0);
+
+		assert.equal(subtags[0].type(), 'language');
+		assert.equal(subtags[0].format(), 'prs');
+	});
+
 	test('subtags() returns subtags', function() {
 		var subtags;
 

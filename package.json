@@ -1,26 +1,19 @@
 {
 	"name": "language-tags",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"implements": ["CommonJS/Modules/1.0"],
 	"description": "Work with IANA language tags.",
 	"main": "lib/index.js",
 	"homepage": "https://github.com/mattcg/language-tags",
+	"author": "Matthew Caruana Galizia <m@m.cg>",
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/mattcg/language-tags.git"
 	},
-	"contributors": [
-		{
-			"name": "Matthew Caruana Galizia",
-			"email": "m@m.cg"
-		}
-	],
-	"licenses": [
-		{
-			"type": "MIT",
-			"url": "http://mattcg.mit-license.org/"
-		}
-	],
+	"bugs": {
+		"url": "https://github.com/mattcg/language-tags/issues"
+	},
+	"license": "MIT",
 	"scripts": {
 		"test": "make test"
 	},

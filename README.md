@@ -211,6 +211,14 @@ Returns `grandfathered` if the tag is grandfathered, `redundant` if the tag is r
 
 Returns an array of subtags making up the tag, as `Subtag` objects.
 
+#### tag.language(), tag.region(), tag.script() ####
+
+Shortcuts for `tag.find('language')`, `tag.find('region')` and `tag.find('script')`.
+
+#### tag.find(type) ####
+
+Find a subtag of the given type from those making up the tag.
+
 #### tag.valid() ####
 
 Returns `true` if the tag is valid, `false` otherwise.

@@ -95,15 +95,19 @@ suite('Tag', function() {
 		assert.equal(tag.type(), 'grandfathered');
 		subtags = tag.subtags();
 		assert.deepEqual(subtags, []);
+		assert.equal(undefined, tag.region());
+		assert.equal(undefined, tag.language());
 	});
 
-	test('tag.subtags() returns empty array for redundant tag', function() {
+	test('tag.subtags() returns array for redundant tag', function() {
 		var tag, subtags;
 
 		tag = new Tag('az-Arab');
 		assert.equal(tag.type(), 'redundant');
 		subtags = tag.subtags();
-		assert.deepEqual(subtags, []);
+		assert.equal(2, subtags.length);
+		assert.equal(subtags[0].format(), 'az');
+		assert.equal(subtags[1].format(), 'Arab');
 	});
 
 	test('tag.errors() returns error for deprecated grandfathered tag', function() {
@@ -487,7 +491,7 @@ suite('Tag', function() {
 		assert.equal(tag.added(), '1998-03-10');
 	});
 
-	test('tag.description() returns description when available', function() {
+	test('tag.descriptions() returns descriptions when available', function() {
 		var tag;
 
 		tag = new Tag('i-default');
@@ -519,5 +523,17 @@ suite('Tag', function() {
 		assert.equal(tag.preferred().format(), 'cmn-Hant');
 
 		assert.equal(new Tag('zh-Hans').preferred(), null);
+	});
+
+	test('tag.region() and tag.language() return subtags for redundant tags', function() {
+		var tag;
+
+		tag = new Tag('es-419');
+		assert.deepEqual(tag.region().descriptions(), ['Latin America and the Caribbean']);
+		assert.deepEqual(tag.language().descriptions(), ['Spanish', 'Castilian']);
+
+		tag = new Tag('sgn-NL');
+		assert.deepEqual(tag.region().descriptions(), ['Netherlands']);
+		assert.deepEqual(tag.language().descriptions(), ['Sign languages']);
 	});
 });

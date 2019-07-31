@@ -1,7 +1,9 @@
 {
 	"name": "language-tags",
 	"version": "1.0.5",
-	"implements": ["CommonJS/Modules/1.0"],
+	"implements": [
+		"CommonJS/Modules/1.0"
+	],
 	"description": "Work with IANA language tags.",
 	"main": "lib/index.js",
 	"homepage": "https://github.com/mattcg/language-tags",
@@ -29,8 +31,8 @@
 		"language-subtag-registry": "~0.3.2"
 	},
 	"devDependencies": {
-		"mocha": "~2.3.4",
+		"mocha": "~6.2.0",
 		"istanbul": "~0.4.2",
-		"coveralls": "~2.11.6"
+		"coveralls": "~3.0.5"
 	}
 }

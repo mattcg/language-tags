@@ -7,13 +7,16 @@
 	"description": "Work with IANA language tags.",
 	"main": "lib/index.js",
 	"homepage": "https://github.com/mattcg/language-tags",
-	"author": "Matthew Caruana Galizia <m@m.cg>",
+	"author": "Matthew Caruana Galizia <mattcg@gmail.com>",
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/mattcg/language-tags.git"
 	},
 	"bugs": {
 		"url": "https://github.com/mattcg/language-tags/issues"
+	},
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com/"
 	},
 	"license": "MIT",
 	"scripts": {
@@ -28,7 +31,7 @@
 		"multilingualization"
 	],
 	"dependencies": {
-		"language-subtag-registry": "~0.3.2"
+		"language-subtag-registry": "^0.3.20"
 	},
 	"devDependencies": {
 		"mocha": "~6.2.0",

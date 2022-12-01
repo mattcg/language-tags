@@ -15,9 +15,6 @@
 	"bugs": {
 		"url": "https://github.com/mattcg/language-tags/issues"
 	},
-	"publishConfig": {
-		"registry": "https://npm.pkg.github.com/"
-	},
 	"license": "MIT",
 	"scripts": {
 		"test": "make test"

@@ -37,5 +37,14 @@
 	},
 	"files": [
 		"/lib"
-	]
+	],
+	"eslintConfig": {
+		"parserOptions": {
+			"ecmaVersion": 13,
+			"sourceType": "module"
+		},
+		"env": {
+			"node": true
+		}
+	}
 }

@@ -1,6 +1,6 @@
 {
 	"name": "language-tags",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"implements": [
 		"CommonJS/Modules/1.0"
 	],

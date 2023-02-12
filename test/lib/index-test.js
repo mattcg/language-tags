@@ -108,6 +108,16 @@ suite('tags', function() {
 		assert.equal(subtags[1].format(), 'MT');
 	});
 
+	test('subtags() is case insensitive', function() {
+		var subtags;
+
+		// Test for issue #11.
+		subtags = tags.subtags('SgNw')
+		assert.equal(subtags.length, 1);
+		assert.equal(subtags[0].type(), 'script');
+		assert.equal(subtags[0].format(), 'Sgnw');
+	});
+
 	test('check() checks tag validity', function() {
 		assert(tags.check('en'));
 		assert(!tags.check('mo'));

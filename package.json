@@ -17,7 +17,8 @@
 	},
 	"license": "MIT",
 	"scripts": {
-		"test": "make test"
+		"test": "nyc mocha ./test/",
+		"coverage": "nyc report --reporter=text-lcov | coveralls"
 	},
 	"keywords": [
 		"iana",
@@ -31,9 +32,9 @@
 		"language-subtag-registry": "^0.3.20"
 	},
 	"devDependencies": {
-		"mocha": "~6.2.0",
-		"istanbul": "~0.4.2",
-		"coveralls": "~3.0.5"
+		"coveralls": "^3.1.1",
+		"nyc": "^15.1.0",
+		"mocha": "^10.2.0"
 	},
 	"files": [
 		"/lib"

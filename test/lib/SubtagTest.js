@@ -1,5 +1,5 @@
 /**
- * @author Matthew Caruana Galizia <m@m.cg>
+ * @author Matthew Caruana Galizia <mattcg@gmail.com>
  * @license MIT: http://mattcg.mit-license.org/
  * @copyright Copyright (c) 2013, Matthew Caruana Galizia
  */
@@ -10,7 +10,7 @@
 'use strict';
 
 var assert = require('assert');
-var Subtag = require(process.env.TEST_LIB_PATH + '/Subtag');
+var Subtag = require('../../lib/Subtag');
 
 suite('Subtag', function() {
 

@@ -1,9 +1,10 @@
 language: node_js
 node_js:
-  - "12.13"
+  - "12.22"
 branches:
   only:
     - master
 script:
-  - "make test"
-  - "make test-coveralls"
+  - "npm test"
+after_success:
+  - "npm run coverage"

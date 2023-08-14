@@ -17,7 +17,10 @@
 	},
 	"license": "MIT",
 	"scripts": {
-		"test": "nyc mocha ./test/",
+		"lint": "eslint --ext=js,mjs .",
+		"tests-only": "nyc mocha ./test/",
+		"pretest": "npm run lint",
+		"test": "npm run tests-only",
 		"coverage": "nyc report --reporter=text-lcov | coveralls"
 	},
 	"keywords": [
@@ -33,8 +36,9 @@
 	},
 	"devDependencies": {
 		"coveralls": "^3.1.1",
-		"nyc": "^15.1.0",
-		"mocha": "^10.2.0"
+		"eslint": "^8.47.0",
+		"mocha": "^10.2.0",
+		"nyc": "^15.1.0"
 	},
 	"files": [
 		"/lib"
@@ -44,11 +48,20 @@
 	},
 	"eslintConfig": {
 		"parserOptions": {
-			"ecmaVersion": 13,
-			"sourceType": "module"
+			"ecmaVersion": 2022,
+			"sourceType": "script"
 		},
 		"env": {
 			"node": true
-		}
+		},
+		"overrides": [
+			{
+				"files": "test/**",
+				"globals": {
+					"suite": false,
+					"test": false
+				}
+			}
+		]
 	}
 }

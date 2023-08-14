@@ -4,9 +4,6 @@
  * @copyright Copyright (c) 2013, Matthew Caruana Galizia
  */
 
-/*jshint node:true*/
-/*global test, suite*/
-
 'use strict';
 
 var assert = require('assert');

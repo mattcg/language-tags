@@ -1,6 +1,10 @@
 language: node_js
 node_js:
-  - "12.22"
+  - "20"
+  - "18"
+  - "16"
+  - "14"
+  - "12"
 branches:
   only:
     - master

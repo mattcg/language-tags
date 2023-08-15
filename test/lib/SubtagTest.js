@@ -9,19 +9,18 @@
 var assert = require('assert');
 var Subtag = require('../../lib/Subtag');
 
-suite('Subtag', function() {
-
-	test('subtag.type() returns type', function() {
+describe('Subtag', function () {
+	it('subtag.type() returns type', function() {
 		assert.equal(new Subtag('zh', 'language').type(), 'language');
 		assert.equal(new Subtag('IQ', 'region').type(), 'region');
 	});
 
-	test('subtag.descriptions() returns descriptions', function() {
+	it('subtag.descriptions() returns descriptions', function() {
 		assert.deepEqual(new Subtag('IQ', 'region').descriptions(), ['Iraq']);
 		assert.deepEqual(new Subtag('vsv', 'extlang').descriptions(), ['Valencian Sign Language', 'Llengua de signes valenciana']);
 	});
 
-	test('subtag.preferred() returns preferred subtag', function() {
+	it('subtag.preferred() returns preferred subtag', function() {
 		var subtag, preferred;
 
 		// Extlang
@@ -60,7 +59,7 @@ suite('Subtag', function() {
 		assert.equal(subtag.preferred(), null);
 	});
 
-	test('subtag.script() returns suppress-script as subtag', function() {
+	it('subtag.script() returns suppress-script as subtag', function() {
 		var subtag, script;
 
 		subtag = new Subtag('en', 'language');
@@ -76,32 +75,32 @@ suite('Subtag', function() {
 		assert.equal(script, null);
 	});
 
-	test('subtag.scope() returns scope', function() {
+	it('subtag.scope() returns scope', function() {
 		assert.equal(new Subtag('zh', 'language').scope(), 'macrolanguage');
 		assert.equal(new Subtag('nah', 'language').scope(), 'collection');
 		assert.equal(new Subtag('en', 'language').scope(), null);
 		assert.equal(new Subtag('IQ', 'region').scope(), null);
 	});
 
-	test('subtag.deprecated() returns deprecation date if available', function() {
+	it('subtag.deprecated() returns deprecation date if available', function() {
 
 		// German Democratic Republic
 		assert.equal(new Subtag('DD', 'region').deprecated(), '1990-10-30');
 		assert.equal(new Subtag('DE', 'region').deprecated(), null);
 	});
 
-	test('subtag.added() returns date added', function() {
+	it('subtag.added() returns date added', function() {
 		assert.equal(new Subtag('DD', 'region').added(), '2005-10-16');
 		assert.equal(new Subtag('DG', 'region').added(), '2009-07-29');
 	});
 
-	test('subtag.comments() returns comments', function() {
+	it('subtag.comments() returns comments', function() {
 
 		// Yugoslavia
 		assert.deepEqual(new Subtag('YU', 'region').comments(), ['see BA, HR, ME, MK, RS, or SI']);
 	});
 
-	test('subtag.format() formats subtag according to conventions', function() {
+	it('subtag.format() formats subtag according to conventions', function() {
 
 		// Language
 		assert.equal(new Subtag('en', 'language').format(), 'en');

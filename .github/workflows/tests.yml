@@ -7,6 +7,8 @@ jobs:
     uses: ljharb/actions/.github/workflows/node-majors.yml@main
     with:
       range: '>= 12'
+      build-command: npm run build
+      build-output-dir: lib/
       command: npm run tests-only
       coverage: coveralls
 

@@ -9,15 +9,14 @@
 var assert = require('assert');
 var Tag = require('../../lib/Tag');
 
-suite('Tag', function() {
-
-	test('tag.type() returns \'grandfathered\'', function() {
+describe('Tag', function () {
+	it('tag.type() returns \'grandfathered\'', function() {
 
 		// Classified as grandfathered in the registry.
 		assert.equal(new Tag('en-GB-oed').type(), 'grandfathered');
 	});
 
-	test('tag.type() returns \'redundant\'', function() {
+	it('tag.type() returns \'redundant\'', function() {
 
 		// Classified as redundant in the registry.
 		assert.equal(new Tag('az-Arab').type(), 'redundant');
@@ -25,13 +24,13 @@ suite('Tag', function() {
 		assert.equal(new Tag('zh-cmn-Hant').type(), 'redundant');
 	});
 
-	test('tag.type() returns \'tag\'', function() {
+	it('tag.type() returns \'tag\'', function() {
 
 		// Maltese (mt) is a subtag but valid as a standalone tag.
 		assert.equal(new Tag('mt').type(), 'tag');
 	});
 
-	test('tag.subtags() returns subtags with correct type', function() {
+	it('tag.subtags() returns subtags with correct type', function() {
 		var tag, subtags;
 
 		tag = new Tag('en');
@@ -60,7 +59,7 @@ suite('Tag', function() {
 		assert.equal(subtags[2].format(), 'Arab');
 	});
 
-	test('tag.subtags() returns only existent subtags', function() {
+	it('tag.subtags() returns only existent subtags', function() {
 		var tag, subtags;
 
 		tag = new Tag('hello');
@@ -73,7 +72,7 @@ suite('Tag', function() {
 		assert.equal(subtags[0].format(), 'en');
 	});
 
-	test('tag.subtags() handles private tags', function() {
+	it('tag.subtags() handles private tags', function() {
 		var tag, subtags;
 
 		tag = new Tag('en-GB-x-Beano');
@@ -85,7 +84,7 @@ suite('Tag', function() {
 		assert.equal(subtags[1].format(), 'GB');
 	});
 
-	test('tag.subtags() returns empty array for grandfathered tag', function() {
+	it('tag.subtags() returns empty array for grandfathered tag', function() {
 		var tag, subtags;
 
 		tag = new Tag('en-GB-oed');
@@ -96,7 +95,7 @@ suite('Tag', function() {
 		assert.equal(undefined, tag.language());
 	});
 
-	test('tag.subtags() returns array for redundant tag', function() {
+	it('tag.subtags() returns array for redundant tag', function() {
 		var tag, subtags;
 
 		tag = new Tag('az-Arab');
@@ -107,7 +106,7 @@ suite('Tag', function() {
 		assert.equal(subtags[1].format(), 'Arab');
 	});
 
-	test('tag.errors() returns error for deprecated grandfathered tag', function() {
+	it('tag.errors() returns error for deprecated grandfathered tag', function() {
 		var tag, errs, err;
 
 		// Grandfathered and deprecated, therefore invalid.
@@ -121,7 +120,7 @@ suite('Tag', function() {
 		assert.equal(err.tag, 'art-lojban');
 	});
 
-	test('tag.errors() returns error for deprecated redundant tag', function() {
+	it('tag.errors() returns error for deprecated redundant tag', function() {
 		var tag, errs, err;
 
 		// Redundant and deprecated, therefore invalid.
@@ -135,7 +134,7 @@ suite('Tag', function() {
 		assert.equal(err.tag, 'zh-cmn');
 	});
 
-	test('tag.errors() returns error if contains deprecated subtags', function() {
+	it('tag.errors() returns error if contains deprecated subtags', function() {
 		var errs, err;
 
 		// Moldovan (mo) is deprecated as a language.
@@ -153,11 +152,11 @@ suite('Tag', function() {
 		assert.equal(err.message, 'The subtag \'NT\' is deprecated.');
 	});
 
-	test('tag.errors() returns empty array for valid tag', function() {
+	it('tag.errors() returns empty array for valid tag', function() {
 		assert.equal(new Tag('en').errors().length, 0);
 	});
 
-	test('tag.errors() returns error if no language tag and not grandfathered or redundant', function() {
+	it('tag.errors() returns error if no language tag and not grandfathered or redundant', function() {
 		var errs, err;
 
 		// Test with empty tag.
@@ -180,7 +179,7 @@ suite('Tag', function() {
 		assert.equal(err.message, 'Missing language tag in \'419\'.');
 	});
 
-	test('tag.errors() returns error if language subtag not at front of tag', function() {
+	it('tag.errors() returns error if language subtag not at front of tag', function() {
 		var errs, err;
 
 		errs = new Tag('GB-en').errors();
@@ -190,7 +189,7 @@ suite('Tag', function() {
 		assert.equal(err.message, 'Missing language tag in \'gb-en\'.');
 	});
 
-	test('tag.errors() returns error if more than one language subtag appears', function() {
+	it('tag.errors() returns error if more than one language subtag appears', function() {
 		var errs, err;
 
 		errs = new Tag('en-en').errors();
@@ -212,7 +211,7 @@ suite('Tag', function() {
 		assert.equal(err.message, 'Extra language subtag \'en\' found.');
 	});
 
-	test('tag.errors() returns error if more than one region subtag appears', function() {
+	it('tag.errors() returns error if more than one region subtag appears', function() {
 		var errs, err;
 
 		errs = new Tag('en-GB-GB').errors();
@@ -228,7 +227,7 @@ suite('Tag', function() {
 		assert.equal(err.message, 'Extra region subtag \'MT\' found.');
 	});
 
-	test('tag.errors() returns error if more than one script subtag appears', function() {
+	it('tag.errors() returns error if more than one script subtag appears', function() {
 		var errs, err;
 
 		errs = new Tag('mt-Arab-Arab').errors();
@@ -264,7 +263,7 @@ suite('Tag', function() {
 		assert.equal(err.message, 'Extra extlang subtag \'bog\' found.');
 	});
 
-	test('tag.errors() returns error if a duplicate variant subtag appears', function() {
+	it('tag.errors() returns error if a duplicate variant subtag appears', function() {
 		var errs, err;
 
 		errs = new Tag('ca-valencia-valencia').errors();
@@ -274,7 +273,7 @@ suite('Tag', function() {
 		assert.equal(err.message, 'Duplicate variant subtag \'valencia\' found.');
 	});
 
-	test('tag.errors() returns error if private-use subtag contains more than 8 characters', function() {
+	it('tag.errors() returns error if private-use subtag contains more than 8 characters', function() {
 		var errs, err;
 
 		// i.e. more than 8 in each component, not in total.
@@ -288,7 +287,7 @@ suite('Tag', function() {
 		assert.equal(err.message, 'The private-use subtag \'morethaneightchars\' is too long.');
 	});
 
-	test('tag.errors() returns error if script subtag is same as language suppress-script', function() {
+	it('tag.errors() returns error if script subtag is same as language suppress-script', function() {
 		var errs, err;
 
 		errs = new Tag('gsw-Latn').errors();
@@ -304,7 +303,7 @@ suite('Tag', function() {
 		assert.equal(err.message, 'The script subtag \'Latn\' is the same as the language suppress-script.');
 	});
 
-	test('tag.errors() returns error if subtags are in wrong order', function() {
+	it('tag.errors() returns error if subtags are in wrong order', function() {
 		var errs, err;
 
 		errs = new Tag('mt-MT-Arab').errors();
@@ -314,18 +313,18 @@ suite('Tag', function() {
 		assert.equal(err.message, 'The subtag \'MT\' should not appear before \'Arab\'.');
 	});
 
-	test('tag.valid() returns true for valid tag', function() {
+	it('tag.valid() returns true for valid tag', function() {
 		assert(new Tag('en').valid());
 		assert(new Tag('en-GB').valid());
 		assert(new Tag('gsw').valid());
 		assert(new Tag('de-CH').valid());
 	});
 
-	test('tag.valid() returns true for subtag followed by private tag', function() {
+	it('tag.valid() returns true for subtag followed by private tag', function() {
 		assert(new Tag('en-x-whatever').valid());
 	});
 
-	test('tag.valid() returns true for non-deprecated grandfathered tag', function() {
+	it('tag.valid() returns true for non-deprecated grandfathered tag', function() {
 		var tag;
 
 		// Grandfathered but not deprecated, therefore valid.
@@ -335,7 +334,7 @@ suite('Tag', function() {
 		assert(tag.valid());
 	});
 
-	test('tag.valid() returns true for non-deprecated redundant tag', function() {
+	it('tag.valid() returns true for non-deprecated redundant tag', function() {
 		var tag;
 
 		// Redundant but not deprecated, therefore valid.
@@ -349,13 +348,13 @@ suite('Tag', function() {
 		assert(tag.valid());
 	});
 
-	test('tag.valid() returns false for non-existent tag', function() {
+	it('tag.valid() returns false for non-existent tag', function() {
 		assert(!new Tag('zzz').valid());
 		assert(!new Tag('zzz-Latn').valid());
 		assert(!new Tag('en-Lzzz').valid());
 	});
 
-	test('tag.valid() returns false for deprecated grandfathered tag', function() {
+	it('tag.valid() returns false for deprecated grandfathered tag', function() {
 		var tag;
 
 		// Grandfathered and deprecated, therefore invalid.
@@ -365,7 +364,7 @@ suite('Tag', function() {
 		assert(!tag.valid());
 	});
 
-	test('tag.valid() returns false for deprecated redundant tag', function() {
+	it('tag.valid() returns false for deprecated redundant tag', function() {
 		var tag;
 
 		// Redundant and deprecated, therefore invalid.
@@ -379,7 +378,7 @@ suite('Tag', function() {
 		assert(!tag.valid());
 	});
 
-	test('tag.valid() returns false if contains deprecated subtags', function() {
+	it('tag.valid() returns false if contains deprecated subtags', function() {
 
 		// Moldovan (mo) is deprecated as a language.
 		assert(!new Tag('mo').valid());
@@ -388,57 +387,57 @@ suite('Tag', function() {
 		assert(!new Tag('en-NT').valid());
 	});
 
-	test('tag.valid() returns false for tag with redundant script subtag', function() {
+	it('tag.valid() returns false for tag with redundant script subtag', function() {
 
 		// Swiss German (gsw) has a suppress script of Latn.
 		assert(!new Tag('gsw-Latn').valid());
 	});
 
-	test('tag.valid() returns false if tag contains no language tag and is not grandfathered or redundant', function() {
+	it('tag.valid() returns false if tag contains no language tag and is not grandfathered or redundant', function() {
 		assert(!new Tag('IQ-Arab').valid());
 		assert(!new Tag('419').valid());
 	});
 
-	test('tag.valid() returns false if language subtag is not front of tag', function() {
+	it('tag.valid() returns false if language subtag is not front of tag', function() {
 		assert(!new Tag('GB-en').valid());
 	});
 
-	test('tag.valid() returns false if more than one language subtag appears', function() {
+	it('tag.valid() returns false if more than one language subtag appears', function() {
 		assert(!new Tag('en-en').valid());
 		assert(!new Tag('ko-en').valid());
 	});
 
-	test('tag.valid() returns false if more than one region subtag appears', function() {
+	it('tag.valid() returns false if more than one region subtag appears', function() {
 		assert(!new Tag('en-001-gb').valid());
 		assert(!new Tag('gb-001').valid());
 	});
 
-	test('tag.valid() returns false if more than one extlang subtag appears', function() {
+	it('tag.valid() returns false if more than one extlang subtag appears', function() {
 		assert(!new Tag('en-asp-bog').valid());
 	});
 
-	test('tag.valid() returns false if more than one script subtag appears', function() {
+	it('tag.valid() returns false if more than one script subtag appears', function() {
 		assert(!new Tag('arb-Latn-Cyrl').valid());
 	});
 
-	test('tag.valid() returns false if a duplicate variant subtag appears', function() {
+	it('tag.valid() returns false if a duplicate variant subtag appears', function() {
 		assert(!new Tag('ca-valencia-valencia').valid());
 	});
 
-	test('tag.valid() returns false if private-use subtag contains more than 8 characters', function() {
+	it('tag.valid() returns false if private-use subtag contains more than 8 characters', function() {
 
 		// i.e. more than 8 in each component, not in total.
 		assert(new Tag('en-x-more-than-eight-chars').valid());
 		assert(!new Tag('en-x-morethaneightchars').valid());
 	});
 
-	test('tag.valid() returns false if script subtag is same as language suppress-script', function() {
+	it('tag.valid() returns false if script subtag is same as language suppress-script', function() {
 		assert(!new Tag('en-Latn').valid());
 		assert(!new Tag('en-GB-Latn').valid());
 		assert(!new Tag('gsw-Latn').valid());
 	});
 
-	test('tag.deprecated() returns deprecation date when available', function() {
+	it('tag.deprecated() returns deprecation date when available', function() {
 		var tag;
 
 		// Redundant and deprecated.
@@ -462,7 +461,7 @@ suite('Tag', function() {
 		assert(!tag.deprecated());
 	});
 
-	test('tag.added() returns add date when available', function() {
+	it('tag.added() returns add date when available', function() {
 		var tag;
 
 		// Redundant and deprecated.
@@ -488,7 +487,7 @@ suite('Tag', function() {
 		assert.equal(tag.added(), '1998-03-10');
 	});
 
-	test('tag.descriptions() returns descriptions when available', function() {
+	it('tag.descriptions() returns descriptions when available', function() {
 		var tag;
 
 		tag = new Tag('i-default');
@@ -500,7 +499,7 @@ suite('Tag', function() {
 		assert.deepEqual(new Tag('en').descriptions(), []);
 	});
 
-	test('tag.format() formats tag according to conventions', function() {
+	it('tag.format() formats tag according to conventions', function() {
 		assert.equal(new Tag('en').format(), 'en');
 		assert.equal(new Tag('En').format(), 'en');
 		assert.equal(new Tag('EN').format(), 'en');
@@ -511,7 +510,7 @@ suite('Tag', function() {
 		assert.equal(new Tag('ZH-hant-hK').format(), 'zh-Hant-HK');
 	});
 
-	test('tag.preferred() returns preferred tag if available', function() {
+	it('tag.preferred() returns preferred tag if available', function() {
 		var tag = new Tag('zh-cmn-Hant');
 
 		assert.equal(tag.type(), 'redundant');
@@ -522,7 +521,7 @@ suite('Tag', function() {
 		assert.equal(new Tag('zh-Hans').preferred(), null);
 	});
 
-	test('tag.region() and tag.language() return subtags for redundant tags', function() {
+	it('tag.region() and tag.language() return subtags for redundant tags', function() {
 		var tag;
 
 		tag = new Tag('es-419');

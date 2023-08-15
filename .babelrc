@@ -3,7 +3,7 @@
 		[
 			"@babel/preset-env",
 			{
-				"targets": { "node": 12 },
+				"targets": { "node": "0.10" },
 				"bugfixes": true,
 				"spec": true,
 				"useBuiltIns": false,

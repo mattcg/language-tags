@@ -21,8 +21,7 @@
 		"prebuild": "rimraf lib && mkdirp lib",
 		"build": "babel src -d lib",
 		"lint": "eslint --ext=js,mjs .",
-		"pretests-only": "npm run build",
-		"tests-only": "nyc mocha ./test/",
+		"tests-only": "nyc mocha --recursive test",
 		"pretest": "npm run lint",
 		"test": "npm run tests-only"
 	},
@@ -43,15 +42,15 @@
 		"coveralls": "^3.1.1",
 		"eslint": "^8.47.0",
 		"mkdirp": "^0.5.6",
-		"mocha": "^10.2.0",
-		"nyc": "^15.1.0",
-		"rimraf": "^3.0.2"
+		"mocha": "^3.5.3",
+		"nyc": "^10.3.2",
+		"rimraf": "^2.7.1"
 	},
 	"files": [
 		"/lib"
 	],
 	"engines": {
-		"node": ">=12"
+		"node": ">=0.10"
 	},
 	"eslintConfig": {
 		"parserOptions": {

@@ -20,8 +20,7 @@
 		"lint": "eslint --ext=js,mjs .",
 		"tests-only": "nyc mocha ./test/",
 		"pretest": "npm run lint",
-		"test": "npm run tests-only",
-		"coverage": "nyc report --reporter=text-lcov | coveralls"
+		"test": "npm run tests-only"
 	},
 	"keywords": [
 		"iana",

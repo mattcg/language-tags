@@ -1,0 +1,14 @@
+{
+	"presets": [
+		[
+			"@babel/preset-env",
+			{
+				"targets": { "node": "0.10" },
+				"bugfixes": true,
+				"spec": true,
+				"useBuiltIns": false,
+				"shippedProposals": true
+			}
+		]
+	]
+}

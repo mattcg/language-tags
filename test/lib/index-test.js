@@ -9,13 +9,12 @@
 var assert = require('assert');
 var tags = require('../../lib');
 
-suite('tags', function() {
-
-	test('date() returns file date', function() {
+describe('tags', function () {
+	it('date() returns file date', function() {
 		assert(/\d{4}\-\d{2}\-\d{2}/.test(tags.date()));
 	});
 
-	test('type() returns subtag by type', function() {
+	it('type() returns subtag by type', function() {
 		var subtag;
 
 		subtag = tags.type('Latn', 'script');
@@ -26,7 +25,7 @@ suite('tags', function() {
 		assert.equal(tags.type('en', 'script'), null);
 	});
 
-	test('region() returns subtag by region', function() {
+	it('region() returns subtag by region', function() {
 		var subtag;
 
 		subtag = tags.region('IQ');
@@ -37,7 +36,7 @@ suite('tags', function() {
 		assert.equal(tags.region('en'), null);
 	});
 
-	test('language() returns subtag by language', function() {
+	it('language() returns subtag by language', function() {
 		var subtag;
 
 		subtag = tags.language('en');
@@ -48,7 +47,7 @@ suite('tags', function() {
 		assert.equal(tags.language('GB'), null);
 	});
 
-	test('languages() returns all languages for macrolanguage', function() {
+	it('languages() returns all languages for macrolanguage', function() {
 		var subtags, err;
 
 		subtags = tags.languages('zh');
@@ -64,7 +63,7 @@ suite('tags', function() {
 		assert.equal(err.message, '\'en\' is not a macrolanguage.');
 	});
 
-	test('search() matches descriptions', function() {
+	it('search() matches descriptions', function() {
 		var subtags;
 
 		subtags = tags.search('Maltese');
@@ -81,7 +80,7 @@ suite('tags', function() {
 		assert.deepEqual(subtags, []);
 	});
 
-	test('search() puts exact match at the top', function() {
+	it('search() puts exact match at the top', function() {
 		var subtags;
 
 		subtags = tags.search('Dari');
@@ -91,7 +90,7 @@ suite('tags', function() {
 		assert.equal(subtags[0].format(), 'prs');
 	});
 
-	test('subtags() returns subtags', function() {
+	it('subtags() returns subtags', function() {
 		var subtags;
 
 		subtags = tags.subtags('whatever');
@@ -105,7 +104,7 @@ suite('tags', function() {
 		assert.equal(subtags[1].format(), 'MT');
 	});
 
-	test('subtags() is case insensitive', function() {
+	it('subtags() is case insensitive', function() {
 		var subtags;
 
 		// Test for issue #11.
@@ -115,12 +114,12 @@ suite('tags', function() {
 		assert.equal(subtags[0].format(), 'Sgnw');
 	});
 
-	test('check() checks tag validity', function() {
+	it('check() checks tag validity', function() {
 		assert(tags.check('en'));
 		assert(!tags.check('mo'));
 	});
 
-	test('gets tag', function() {
+	it('gets tag', function() {
 		var tag;
 
 		tag = tags('en');

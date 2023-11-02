@@ -6,6 +6,7 @@
 	],
 	"description": "Work with IANA language tags.",
 	"main": "lib/index.js",
+	"type": "commonjs",
 	"homepage": "https://github.com/mattcg/language-tags",
 	"author": "Matthew Caruana Galizia <mattcg@gmail.com>",
 	"repository": {

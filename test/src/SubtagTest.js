@@ -8,7 +8,7 @@
 
 import assert from 'assert';
 import {describe, it} from 'mocha';
-import Subtag from '../../src/Subtag.js';
+import Subtag from '../../lib/Subtag.js';
 
 describe('Subtag', function () {
 	it('subtag.type() returns type', function() {

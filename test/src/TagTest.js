@@ -8,7 +8,7 @@
 
 import assert from 'assert';
 import {describe, it} from 'mocha';
-import Tag from '../../src/Tag.js';
+import Tag from '../../lib/Tag.js';
 
 describe('Tag', function () {
 	it('tag.type() returns \'grandfathered\'', function() {

@@ -8,7 +8,7 @@
 
 import assert from 'assert';
 import {describe, it} from 'mocha';
-import tags from '../../src/index.js';
+import tags from '../../lib/index.js';
 
 describe('tags', function () {
 	it('date() returns file date', function() {

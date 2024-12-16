@@ -15,13 +15,8 @@
 	},
 	"license": "MIT",
 	"scripts": {
-		"prepublishOnly": "npm run build",
-		"prebuild": "rimraf lib && mkdirp lib",
-		"build": "babel src -d lib",
-		"lint": "eslint ./src ./test",
-		"tests-only": "c8 mocha",
-		"pretest": "npm run lint",
-		"test": "npm run tests-only"
+		"lint": "eslint ./lib ./test",
+		"test": "c8 mocha"
 	},
 	"keywords": [
 		"iana",
@@ -35,19 +30,15 @@
 		"language-subtag-registry": "^0.3.20"
 	},
 	"devDependencies": {
-		"@babel/cli": "^7.22.10",
-		"@babel/preset-env": "^7.22.10",
 		"coveralls": "^3.1.1",
 		"eslint": "^9.17.0",
-		"mkdirp": "^3.0.1",
 		"mocha": "^11.0.1",
-		"c8": "^10.1.3",
-		"rimraf": "^6.0.1"
+		"c8": "^10.1.3"
 	},
 	"files": [
 		"/lib"
 	],
 	"engines": {
-		"node": ">=0.10"
+		"node": ">=22"
 	}
 }

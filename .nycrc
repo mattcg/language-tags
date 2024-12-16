@@ -1,8 +1,0 @@
-{
-	"check-coverage": false,
-	"reporter": ["text-summary", "html", "json", "lcov"],
-	"exclude": [
-		"test",
-        "lib"
-	]
-}

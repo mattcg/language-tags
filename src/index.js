@@ -128,7 +128,7 @@ tags.region = function(subtag) {
 };
 
 tags.type = function(subtag, type) {
-	var types = index[subtag.toLowerCase()];
+	var types = typeof subtag === 'string' && index[subtag.toLowerCase()];
 
 	if (types && types[type]) {
 		return new Subtag(subtag, type);

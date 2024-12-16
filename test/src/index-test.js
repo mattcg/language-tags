@@ -37,6 +37,10 @@ describe('tags', function () {
 		assert.equal(tags.region('en'), null);
 	});
 
+    it('language() handles undefined argument', function() {
+        assert.ifError(tags.language(undefined));
+    });
+
 	it('language() returns subtag by language', function() {
 		var subtag;
 

@@ -6,8 +6,9 @@
 
 'use strict';
 
-var assert = require('assert');
-var tags = require('../../lib');
+import assert from 'assert';
+import {describe, it} from 'mocha';
+import tags from '../../src/index.js';
 
 describe('tags', function () {
 	it('date() returns file date', function() {

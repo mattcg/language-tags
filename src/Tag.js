@@ -6,12 +6,12 @@
 
 'use strict';
 
-var index = require('language-subtag-registry/data/json/index.json');
-var registry = require('language-subtag-registry/data/json/registry.json');
+import index from 'language-subtag-registry/data/json/index.json' with { type: 'json' };
+import registry from 'language-subtag-registry/data/json/registry.json' with { type: 'json' };
 
-var Subtag = require('./Subtag.js');
+import Subtag from './Subtag.js';
 
-class Tag {
+export default class Tag {
 	static ERR_DEPRECATED = 1;
 	static ERR_NO_LANGUAGE = 2;
 	static ERR_UNKNOWN = 3;
@@ -403,5 +403,3 @@ class Tag {
 		});
 	}
 }
-
-module.exports = Tag;

@@ -6,8 +6,9 @@
 
 'use strict';
 
-var assert = require('assert');
-var Tag = require('../../lib/Tag');
+import assert from 'assert';
+import {describe, it} from 'mocha';
+import Tag from '../../src/Tag.js';
 
 describe('Tag', function () {
 	it('tag.type() returns \'grandfathered\'', function() {

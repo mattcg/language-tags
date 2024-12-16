@@ -6,17 +6,19 @@
 
 'use strict';
 
-var Tag = require('./Tag.js');
-var Subtag = require('./Subtag.js');
+import Tag from './Tag.js';
+import Subtag from './Subtag.js';
 
-var index = require('language-subtag-registry/data/json/index.json');
-var registry = require('language-subtag-registry/data/json/registry.json');
+import index from 'language-subtag-registry/data/json/index.json' with { type: 'json' };
+import registry from 'language-subtag-registry/data/json/registry.json' with { type: 'json' };
+import meta from 'language-subtag-registry/data/json/meta.json' with { type: 'json' };
+import macrolanguages from 'language-subtag-registry/data/json/macrolanguage.json' with { type: 'json' };
 
-var tags = function(tag) {
+const tags = function(tag) {
 	return new Tag(tag);
 };
 
-module.exports = tags;
+export default tags;
 
 tags.check = function(tag) {
 	return new Tag(tag).valid();
@@ -103,7 +105,7 @@ tags.languages = function(macrolanguage) {
 	var i, l, record, results = [];
 
 	macrolanguage = macrolanguage.toLowerCase();
-	if (!require('language-subtag-registry/data/json/macrolanguage.json')[macrolanguage]) {
+	if (!macrolanguages[macrolanguage]) {
 		throw new Error('\'' + macrolanguage + '\' is not a macrolanguage.');
 	}
 
@@ -136,5 +138,5 @@ tags.type = function(subtag, type) {
 };
 
 tags.date = function() {
-	return require('language-subtag-registry/data/json/meta.json')['File-Date'];
+	return meta['File-Date'];
 };

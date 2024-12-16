@@ -6,8 +6,9 @@
 
 'use strict';
 
-var assert = require('assert');
-var Subtag = require('../../lib/Subtag');
+import assert from 'assert';
+import {describe, it} from 'mocha';
+import Subtag from '../../src/Subtag.js';
 
 describe('Subtag', function () {
 	it('subtag.type() returns type', function() {

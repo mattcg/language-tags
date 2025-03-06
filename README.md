@@ -14,7 +14,7 @@ See the [language-subtag-registry](https://github.com/mattcg/language-subtag-reg
 ## API ##
 
 ```js
-var tags = require('language-tags')
+import tags from 'language-tags'
 ```
 
 Note that all lookups and checks for tags and subtags are case insensitive. For formatting according to common conventions, see `tag.format`.

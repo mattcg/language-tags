@@ -1,6 +1,6 @@
 # IANA Language Tags for JavaScript #
 
-[![Build Status](https://travis-ci.org/mattcg/language-tags.png?branch=master)](https://travis-ci.org/mattcg/language-tags)
+[![Build Status](https://github.com/mattcg/language-tags/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/mattcg/language-tags/actions/workflows/tests.yml)
 [![Coverage Status](https://coveralls.io/repos/mattcg/language-tags/badge.png)](https://coveralls.io/r/mattcg/language-tags)
 
 Based on [BCP 47](https://www.rfc-editor.org/info/bcp47) ([RFC 5646](https://www.rfc-editor.org/rfc/rfc5646.html)) and the latest [IANA language subtag registry](http://www.iana.org/assignments/language-subtag-registry).

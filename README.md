@@ -14,7 +14,7 @@ See the [language-subtag-registry](https://github.com/mattcg/language-subtag-reg
 ## API ##
 
 ```js
-import tags from 'language-tags'
+import {tags, check, subtags, filter, search, languages, language, region, type, date} from 'language-tags'
 ```
 
 Note that all lookups and checks for tags and subtags are case insensitive. For formatting according to common conventions, see `tag.format`.
@@ -23,35 +23,35 @@ Note that all lookups and checks for tags and subtags are case insensitive. For 
 
 Check whether a hyphen-separated tag is valid and well-formed. Always returns a `Tag`, which can be checked using the `valid` method.
 
-### tags.check(tag) ###
+### check(tag) ###
 
 Shortcut for `tags(tag).valid()`. Return `true` if the tag is valid, `false` otherwise. For meaningful error output see `tag.errors()`.
 
-### tags.subtags(subtag), tags.subtags(subtags) ###
+### subtags(subtag), subtags(subtags) ###
 
 Look up one or more subtags. Returns an array of `Subtag` objects. Returns an empty array if all of the subtags are non-existent.
 
-Calling `tags.subtags('mt')` will return an array with two `Subtag` objects: one for Malta (the 'region' type subtag) and one for Maltese (the 'language' type subtag).
+Calling `subtags('mt')` will return an array with two `Subtag` objects: one for Malta (the 'region' type subtag) and one for Maltese (the 'language' type subtag).
 
 ```
-> tags.subtags('mt');
+> subtags('mt');
 [Subtag, Subtag]
-> tags.subtags('bumblebee');
+> subtags('bumblebee');
 []
 ```
 
-To get or check a single subtag by type use `tags.language(subtag)`, `tags.region(subtag)` or `tags.type(subtag, type)`.
+To get or check a single subtag by type use `language(subtag)`, `region(subtag)` or `type(subtag, type)`.
 
-### tags.filter(subtags) ###
+### filter(subtags) ###
 
-The opposite of `tags.subtags(subtags)`. Returns an array of codes that are not registered subtags, otherwise returns an empty array.
+The opposite of `subtags(subtags)`. Returns an array of codes that are not registered subtags, otherwise returns an empty array.
 
 ```
-> tags.filter(['en', 'Aargh']);
+> filter(['en', 'Aargh']);
 ['Aargh']
 ```
 
-### tags.search(description, [all]) ###
+### search(description, [all]) ###
 
 Search for tags and subtags by description. Supports either a RegExp object or a string for `description`. Returns an array of `Subtag` and `Tag` objects or an empty array if no results were found.
 
@@ -59,60 +59,60 @@ Note that `Tag` objects in the results represent 'grandfathered' or 'redundant' 
 
 Search is case-insensitive if `description` is a string.
 
-### tags.languages(macrolanguage) ###
+### languages(macrolanguage) ###
 
 Returns an array of `Subtag` objects representing all the 'language' type subtags belonging to the given 'macrolanguage' type subtag.
 
 Throws an error if `macrolanguage` is not a macrolanguage.
 
 ```
-> tags.languages('zh');
+> languages('zh');
 [Subtag, Subtag...]
-> tags.languages('en');
+> languages('en');
 Error: 'en' is not a valid macrolanguage.
 ```
 
-### tags.language(subtag) ###
+### language(subtag) ###
 
 Convenience method to get a single 'language' type subtag. Can be used to validate an input value as a language subtag. Returns a `Subtag` object or `null`.
 
 ```
-> tags.language('en');
+> language('en');
 Subtag
-> tags.language('us');
+> language('us');
 null
 ```
 
-### tags.region(subtag) ###
+### region(subtag) ###
 
 As above, but with 'region' type subtags.
 
 ```
-> tags.region('mt');
+> region('mt');
 Subtag
-> tags.region('en');
+> region('en');
 null
 ```
 
-### tags.type(subtag, type) ###
+### type(subtag, type) ###
 
 Get a subtag by type. Returns the subtag matching `type` as a `Subtag` object otherwise returns `null`.
 
 A `type` consists of one of the following strings: 'language', 'extlang', 'script', 'region' or 'variant'. To get a 'grandfathered' or 'redundant' type tag use `tags(tag)`.
 
 ```
-> tags.type('zh', 'macrolanguage');
+> type('zh', 'macrolanguage');
 Subtag
-> tags.type('zh', 'script');
+> type('zh', 'script');
 null
 ```
 
-### tags.date() ###
+### date() ###
 
 Returns the file date for the underlying data, as a string.
 
 ```
-> tags.date();
+> date();
 '2004-06-28'
 ```
 
@@ -127,7 +127,7 @@ Get the subtag type (either 'language', 'extlang', 'script', 'region' or 'varian
 Returns an array of description strings (a subtag may have more than one description).
 
 ```
-> tags.language('ro').descriptions();
+> language('ro').descriptions();
 ['Romanian', 'Moldavian', 'Moldovan']
 ```
 
@@ -136,7 +136,7 @@ Returns an array of description strings (a subtag may have more than one descrip
 Returns a preferred subtag as a `Subtag` object if the subtag is deprecated. For example, `ro` is preferred over deprecated `mo`.
 
 ```
-> tags.language('mo').preferred();
+> language('mo').preferred();
 Subtag
 ```
 
@@ -148,12 +148,12 @@ For subtags of type 'language' or 'extlang', returns a `Subtag` object represent
 
 Returns the subtag scope as a string, or `null` if the subtag has no scope.
 
-Tip: if the subtag represents a macrolanguage, you can use `tags.languages(macrolanguage)` to get a list of all the macrolanguage's individual languages.
+Tip: if the subtag represents a macrolanguage, you can use `languages(macrolanguage)` to get a list of all the macrolanguage's individual languages.
 
 ```
-> tags.language('zh').scope();
+> language('zh').scope();
 'macrolanguage'
-> tags.language('nah').scope();
+> language('nah').scope();
 'collection'
 ```
 
@@ -162,7 +162,7 @@ Tip: if the subtag represents a macrolanguage, you can use `tags.languages(macro
 Returns a date string reflecting the deprecation date if the subtag is deprecated, otherwise returns `null`.
 
 ```
-> tags.language('ja').deprecated();
+> language('ja').deprecated();
 '2008-11-22'
 ```
 
@@ -171,7 +171,7 @@ Returns a date string reflecting the deprecation date if the subtag is deprecate
 Returns a date string reflecting the date the subtag was added to the registry.
 
 ```
-> tags.language('ja').added();
+> language('ja').added();
 '2005-10-16'
 ```
 
@@ -180,7 +180,7 @@ Returns a date string reflecting the date the subtag was added to the registry.
 Returns an array of comments, if any, otherwise returns an empty array.
 
 ```
-> tags.language('nmf').comments();
+> language('nmf').comments();
 ['see ntx']
 ```
 

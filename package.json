@@ -16,7 +16,8 @@
 	"license": "MIT",
 	"scripts": {
 		"pretest": "eslint ./lib ./test",
-		"test": "c8 mocha"
+		"test": "c8 mocha",
+		"tests-only": "c8 mocha"
 	},
 	"keywords": [
 		"iana",

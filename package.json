@@ -1,6 +1,6 @@
 {
 	"name": "language-tags",
-	"version": "2.0.1",
+	"version": "2.1.0",
 	"description": "Work with IANA language tags.",
 	"main": "lib/index.js",
 	"type": "module",

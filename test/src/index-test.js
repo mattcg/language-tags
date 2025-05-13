@@ -53,10 +53,10 @@ describe('tags', function () {
 	});
 
 	it('languages() returns all languages for macrolanguage', function() {
-		var subtags, err;
+		var stags, err;
 
-		subtags = languages('zh');
-		assert(subtags.length > 0);
+		stags = languages('zh');
+		assert(stags.length > 0);
 
 		try {
 			assert.equal(languages('en'));
@@ -69,54 +69,54 @@ describe('tags', function () {
 	});
 
 	it('search() matches descriptions', function() {
-		var subtags;
+		var stags;
 
-		subtags = search('Maltese');
-		assert(subtags.length > 0);
+		stags = search('Maltese');
+		assert(stags.length > 0);
 
-		assert.equal(subtags[0].type(), 'language');
-		assert.equal(subtags[0].format(), 'mt');
-		assert.equal(subtags[1].type(), 'language');
-		assert.equal(subtags[1].format(), 'mdl');
-		assert.equal(subtags[2].type(), 'extlang');
-		assert.equal(subtags[2].format(), 'mdl');
+		assert.equal(stags[0].type(), 'language');
+		assert.equal(stags[0].format(), 'mt');
+		assert.equal(stags[1].type(), 'language');
+		assert.equal(stags[1].format(), 'mdl');
+		assert.equal(stags[2].type(), 'extlang');
+		assert.equal(stags[2].format(), 'mdl');
 
-		subtags = search('Gibberish');
-		assert.deepEqual(subtags, []);
+		stags = search('Gibberish');
+		assert.deepEqual(stags, []);
 	});
 
 	it('search() puts exact match at the top', function() {
-		var subtags;
+		var stags;
 
-		subtags = search('Dari');
-		assert(subtags.length > 0);
+		stags = search('Dari');
+		assert(stags.length > 0);
 
-		assert.equal(subtags[0].type(), 'language');
-		assert.equal(subtags[0].format(), 'prs');
+		assert.equal(stags[0].type(), 'language');
+		assert.equal(stags[0].format(), 'prs');
 	});
 
 	it('subtags() returns subtags', function() {
-		var subtags2;
+		var stags;
 
-		subtags2 = subtags('whatever');
-		assert.deepEqual(subtags2, []);
+		stags = subtags('whatever');
+		assert.deepEqual(stags, []);
 
-		subtags2 = subtags('mt');
-		assert.equal(subtags2.length, 2);
-		assert.equal(subtags2[0].type(), 'language');
-		assert.equal(subtags2[0].format(), 'mt');
-		assert.equal(subtags2[1].type(), 'region');
-		assert.equal(subtags2[1].format(), 'MT');
+		stags = subtags('mt');
+		assert.equal(stags.length, 2);
+		assert.equal(stags[0].type(), 'language');
+		assert.equal(stags[0].format(), 'mt');
+		assert.equal(stags[1].type(), 'region');
+		assert.equal(stags[1].format(), 'MT');
 	});
 
 	it('subtags() is case insensitive', function() {
-		var subtags2;
+		var stags;
 
 		// Test for issue #11.
-		subtags2 = subtags('SgNw')
-		assert.equal(subtags2.length, 1);
-		assert.equal(subtags2[0].type(), 'script');
-		assert.equal(subtags2[0].format(), 'Sgnw');
+		stags = subtags('SgNw')
+		assert.equal(stags.length, 1);
+		assert.equal(stags[0].type(), 'script');
+		assert.equal(stags[0].format(), 'Sgnw');
 	});
 
 	it('check() checks tag validity', function() {

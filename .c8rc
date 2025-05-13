@@ -1,7 +1,7 @@
 {
 	"reporter": ["text-summary", "html", "lcov"],
-    "all": true,
-    "src": [
-        "src"
-    ]
+	"all": true,
+	"src": [
+		"src"
+	]
 }
